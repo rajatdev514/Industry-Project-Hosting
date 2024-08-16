@@ -2,7 +2,11 @@ import React from "react";
 import Layout from "../Layout/Layout";
 
 const Training = () => {
-  return <Layout />;
+  return (
+    <Layout>
+      <h1>Training Page</h1>
+    </Layout>
+  );
 };
 
 export default Training;

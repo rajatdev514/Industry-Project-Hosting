@@ -67,7 +67,7 @@ const Header = () => {
                 <NavLink
                   className="nav-link d-flex flex-column text-center"
                   aria-current="page"
-                  to="/internship"
+                  to="/projects"
                 >
                   <i class="fas fa-project-diagram"></i>
                   <span>Projects</span>

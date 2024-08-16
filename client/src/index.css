@@ -19,15 +19,11 @@
   margin-top: 10px;
 } */
 
-/* Navbar Background */
-/* Navbar Background */
-/* Navbar Background */
 .navbar {
   background: linear-gradient(90deg, #6a11cb 10%, #2575fc 80%);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Navbar Brand */
 .navbar-brand {
   color: #ffffff;
   font-size: 1.5rem;
@@ -40,7 +36,6 @@
   color: #e0e0e0;
 }
 
-/* Navbar Toggler */
 .navbar-toggler {
   border: none;
   outline: none;
@@ -51,7 +46,6 @@
   font-size: 1.5rem;
 }
 
-/* Navbar Links */
 .navbar-nav .nav-link {
   color: #ffffff;
   font-size: 1rem;
@@ -59,20 +53,18 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
-  border-bottom: none; /* Remove underline from all links */
+  border-bottom: none;
 }
 
 .navbar-nav .nav-link:hover {
   color: #00d2ff;
 }
 
-/* Active Link */
 .navbar-nav .nav-link.active {
   color: #00d2ff;
-  border-bottom: 2px solid #00d2ff; /* Add underline only to the active link */
+  border-bottom: 2px solid #00d2ff;
 }
 
-/* Icons and Text Alignment */
 .navbar-nav .nav-link i {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
@@ -87,13 +79,12 @@
   transform: scale(1.2);
 }
 
-/* Ensure underline is only on the active link */
 .navbar-nav .nav-item .nav-link {
-  border-bottom: none; /* Remove underline from all links */
+  border-bottom: none;
 }
 
 .navbar-nav .nav-item .nav-link.active {
-  border-bottom: 2px solid #00d2ff; /* Keep underline only on the active link */
+  border-bottom: 2px solid #00d2ff;
 }
 
 /* Mobile View Styles */
@@ -109,7 +100,6 @@
   }
 }
 
-/* Add some spacing between the logo and the menu */
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -117,7 +107,7 @@
 }
 
 /* -------- Footer ------- */
-/* Footer Container */
+
 .footer {
   background-color: #1a1a1a;
   color: #e0e0e0;
@@ -136,7 +126,6 @@
   gap: 20px;
 }
 
-/* Logo Styling */
 .footer-logo h3 {
   font-size: 1.8rem;
   color: #00d2ff;
@@ -145,7 +134,6 @@
   letter-spacing: 2px;
 }
 
-/* Footer Links */
 .footer-links ul {
   list-style: none;
   padding: 0;
@@ -165,7 +153,6 @@
   color: #00d2ff;
 }
 
-/* Social Media Icons */
 .footer-socials a {
   color: #e0e0e0;
   font-size: 1.5rem;
@@ -177,7 +164,6 @@
   color: #00d2ff;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   margin-top: 10px;
   font-size: 0.9rem;
@@ -208,7 +194,7 @@
 }
 
 /* ----- Contact ----- */
-/* Contact Page Container */
+
 .contact-page {
   background-color: #1a1a1a;
   color: #e0e0e0;
@@ -219,7 +205,6 @@
   /* max-height: 100vh; */
 }
 
-/* Page Title */
 .contact-title {
   font-size: 2.5rem;
   color: #00d2ff;
@@ -228,7 +213,6 @@
   letter-spacing: 2px;
 }
 
-/* Contact Container */
 .contact-container {
   display: flex;
   flex-direction: row;
@@ -238,7 +222,6 @@
   width: 100%;
 }
 
-/* Contact Form */
 .contact-form {
   flex: 1;
   background-color: #252525;
@@ -292,7 +275,6 @@
   background-color: #009bcc;
 }
 
-/* Contact Information */
 .contact-info {
   flex: 0.5;
   background-color: #252525;
@@ -343,5 +325,171 @@
   .contact-form,
   .contact-info {
     width: 100%;
+  }
+}
+
+/* ----- About us ----- */
+
+.about-page {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 60px 20px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #252525;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00d2ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* animation: slideIn 1s ease-out forwards; */
+}
+
+.section-text {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  /* animation: fadeIn 1.5s ease-out forwards; */
+}
+
+.section-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  /* animation: zoomIn 1.5s ease-out forwards; */
+}
+
+.section-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00d2ff;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* animation: slideIn 1s ease-out forwards; */
+}
+
+.section-button:hover {
+  background-color: #008cba;
+  transform: translateY(-5px);
+}
+
+.team-section {
+  padding: 60px 0;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  color: #00d2ff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  /* animation: slideIn 1s ease-out forwards; */
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.team-photo {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  /* animation: fadeIn 1.5s ease-out forwards; */
+}
+
+.team-name {
+  font-size: 1.2rem;
+  color: #00d2ff;
+  margin-bottom: 5px;
+  /* animation: slideIn 1s ease-out forwards; */
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #e0e0e0;
+  /* animation: fadeIn 1.5s ease-out forwards; */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
