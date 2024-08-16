@@ -3,3 +3,345 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* .navbar {
+  padding: 1rem;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar .nav-link {
+  margin-left: 30px;
+}
+
+/* .navbar span {
+  margin-top: 10px;
+} */
+
+/* Navbar Background */
+/* Navbar Background */
+/* Navbar Background */
+.navbar {
+  background: linear-gradient(90deg, #6a11cb 10%, #2575fc 80%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-brand:hover {
+  color: #e0e0e0;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler i {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  border-bottom: none; /* Remove underline from all links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00d2ff;
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+  color: #00d2ff;
+  border-bottom: 2px solid #00d2ff; /* Add underline only to the active link */
+}
+
+/* Icons and Text Alignment */
+.navbar-nav .nav-link i {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link span {
+  font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link:hover i {
+  transform: scale(1.2);
+}
+
+/* Ensure underline is only on the active link */
+.navbar-nav .nav-item .nav-link {
+  border-bottom: none; /* Remove underline from all links */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  border-bottom: 2px solid #00d2ff; /* Keep underline only on the active link */
+}
+
+/* Mobile View Styles */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+    background-color: #2575fc;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav .nav-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Add some spacing between the logo and the menu */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* -------- Footer ------- */
+/* Footer Container */
+.footer {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 40px 0;
+  text-align: center;
+  /* position: relative; */
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo Styling */
+.footer-logo h3 {
+  font-size: 1.8rem;
+  color: #00d2ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Footer Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+  color: #00d2ff;
+}
+
+/* Social Media Icons */
+.footer-socials a {
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-socials a:hover {
+  color: #00d2ff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  color: #7a7a7a;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-socials a {
+    font-size: 1.2rem;
+    margin: 0 5px;
+  }
+}
+
+/* ----- Contact ----- */
+/* Contact Page Container */
+.contact-page {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* max-height: 100vh; */
+}
+
+/* Page Title */
+.contact-title {
+  font-size: 2.5rem;
+  color: #00d2ff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  background-color: #252525;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #e0e0e0;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 2px solid #00d2ff;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #00d2ff;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #009bcc;
+}
+
+/* Contact Information */
+.contact-info {
+  flex: 0.5;
+  background-color: #252525;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #00d2ff;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-socials a {
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-socials a:hover {
+  color: #00d2ff;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+}
