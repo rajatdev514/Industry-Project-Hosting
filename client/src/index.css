@@ -22,6 +22,9 @@
 .navbar {
   background: linear-gradient(90deg, #6a11cb 10%, #2575fc 80%);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
 .navbar-brand {
@@ -615,9 +618,8 @@ body {
 .main-container{
   width: 100%;
   background-color:rgb(210, 210, 221);
-  max-width: 1400px;
   
-  height:600px;
+  height:650px;
   margin:0px auto;
   background-image: url("https://media.istockphoto.com/id/1361844238/photo/high-school-professor-assisting-her-students-in-e-learning-on-laptop-in-the-classroom.jpg?s=2048x2048&w=is&k=20&c=zejjb8o-LSBKWh_FldgOUeapNrw4zsKKdxsTLtAH5XY=");
   filter:drop-shadow(2rem);
@@ -630,7 +632,7 @@ body {
 }
 .left h1{
   color:rgb(37, 37, 87);
-  font-weight:bolder;
+  font-weight:800;
   margin-bottom:15px;
   margin-top:60px;
   font-size:60px;
@@ -640,7 +642,6 @@ body {
 .left h4{
   color:white;
   font-size: 18px;
-  font-weight:bold;
   margin-bottom:40px;
 
 }
@@ -648,6 +649,8 @@ body {
   font-size:20px;
   color:rgb(240, 225, 225);
   margin-bottom:40px;
+  font-weight:800;
+
 
 }
 .btn{
