@@ -1,159 +1,146 @@
 import React from "react";
 import Layout from "../Layout/Layout";
 import { Link } from "react-router-dom";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Slider from "../Slider/Slider";
 
 const About = () => {
   return (
     <Layout>
-      <div className="about-page">
-        <section className="content-section">
-          <div className="text-content">
-            <h2 className="section-title">About Us</h2>
-            <p className="section-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              vero quasi perspiciatis illum officia corporis sequi provident
-              molestias. Officia suscipit accusantium pariatur et magnam,
-              laudantium vero at quod modi in!
-            </p>
-          </div>
-          <div className="image-content">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="About Us"
-              className="section-image"
-            />
-          </div>
+      <div className="about-us">
+        <section className="intro">
+          <h1>About TechNova Software</h1>
+          <p>
+            TechNova Software specializes in providing comprehensive software
+            development, skill-based training, and consulting services to a
+            diverse range of clients. Our firm combines technical expertise with
+            strategic insights to deliver tailored solutions that empower
+            businesses to thrive in the digital age.
+          </p>
         </section>
 
-        <section className="content-section">
-          <div className="image-content">
+        <Slider />
+        <section className="service-section">
+          <div className="service">
             <img
-              src="https://via.placeholder.com/400x300"
-              alt="Training"
-              className="section-image"
+              src="/image2.png"
+              alt="Software Development"
+              className="service-img"
             />
-          </div>
-          <div className="text-content">
-            <h2 className="section-title">Training</h2>
-            <p className="section-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
-              fugiat similique, blanditiis asperiores molestias nulla vel esse
-              deleniti tempore, magnam accusantium repellat quae qui sed sint
-              eum, quo iste modi!
-            </p>
-            <Link to="/training" className="section-button">
-              Learn More
-            </Link>
-          </div>
-        </section>
-
-        <section className="content-section">
-          <div className="text-content">
-            <h2 className="section-title">Internships</h2>
-            <p className="section-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
-              totam reiciendis id eveniet, provident architecto accusantium
-              maxime vel odio quia suscipit rerum possimus tenetur asperiores
-              recusandae? Perferendis omnis officiis dignissimos?
-            </p>
-            <Link to="/internships" className="section-button">
-              Explore Internships
-            </Link>
-          </div>
-          <div className="image-content">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Internships"
-              className="section-image"
-            />
-          </div>
-        </section>
-
-        <section className="content-section">
-          <div className="image-content">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Live Projects"
-              className="section-image"
-            />
-          </div>
-          <div className="text-content">
-            <h2 className="section-title">Live Projects</h2>
-            <p className="section-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
-              libero vel consequuntur aspernatur possimus, quo excepturi
-              consequatur veritatis corporis non omnis ad ab ducimus alias quod
-              minima hic explicabo asperiores.
-            </p>
-            <Link to="/live-projects" className="section-button">
-              View Projects
-            </Link>
-          </div>
-        </section>
-
-        <section className="content-section">
-          <div className="text-content">
-            <h2 className="section-title">Careers</h2>
-            <p className="section-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
-              libero quam, reprehenderit ipsum quia labore eius doloribus ipsa
-              molestias a repellat in officia blanditiis quisquam autem nulla
-              quasi! Dolore, necessitatibus?
-            </p>
-            <Link to="/careers" className="section-button">
-              Join Us
-            </Link>
-          </div>
-          <div className="image-content">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Careers"
-              className="section-image"
-            />
-          </div>
-        </section>
-
-        <section className="team-section">
-          <h2 className="team-title">Meet Our Team</h2>
-          <div className="team-container">
-            <div className="team-member">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Team Member 1"
-                className="team-photo"
-              />
-              <h3 className="team-name">John Doe</h3>
-              <p className="team-role">CEO & Founder</p>
+            <div className="service-description">
+              <h2>Software Development Services</h2>
+              <p>
+                <span className="aboutspan">Custom Software Development:</span>{" "}
+                We design and develop bespoke software solutions tailored to
+                meet the unique needs and challenges of our clients. Our
+                expertise spans across web applications, mobile apps, enterprise
+                solutions, and more.
+              </p>
+              <p>
+                <span className="aboutspan">
+                  Software Integration and Modernization:
+                </span>{" "}
+                We help businesses integrate new technologies with existing
+                systems to enhance efficiency and functionality. Our team
+                ensures seamless transitions and minimal disruptions during the
+                modernization process.
+              </p>
+              <p>
+                <span className="aboutspan">
+                  Software Maintenance and Support:
+                </span>{" "}
+                We provide ongoing maintenance and support services to ensure
+                that our clients' software applications remain secure,
+                up-to-date, and optimized for performance.{" "}
+              </p>
             </div>
-            <div className="team-member">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Team Member 2"
-                className="team-photo"
-              />
-              <h3 className="team-name">Jane Smith</h3>
-              <p className="team-role">CTO</p>
+          </div>
+
+          <div className="service">
+            <img
+              src="/image1.png"
+              alt="Training Services"
+              className="service-img"
+            />
+            <div className="service-description">
+              <h2>Skill-based Training Services</h2>
+              <p>
+                <span className="aboutspan">Technical Training Programs:</span>{" "}
+                We offer comprehensive training programs designed to enhance
+                technical skills and proficiency. Our courses cover a wide range
+                of topics, including programming languages, latest in demand
+                technologies, and more.
+              </p>
+              <p>
+                <span className="aboutspan">
+                  Customized Training Solutions:
+                </span>{" "}
+                We develop customized training solutions tailored to the
+                specific needs of organizations. Our flexible training programs
+                can be delivered onsite or online, providing convenience and
+                flexibility for our clients.
+              </p>
             </div>
-            <div className="team-member">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Team Member 3"
-                className="team-photo"
-              />
-              <h3 className="team-name">Emily Johnson</h3>
-              <p className="team-role">Head of Training</p>
+          </div>
+
+          <div className="service">
+            <img
+              src="/image3.png"
+              alt="Consulting Services"
+              className="service-img"
+            />
+            <div className="service-description">
+              <h2>IT Consulting Services</h2>
+              <p>
+                <span className="aboutspan">Strategic IT Consulting:</span> We
+                partner with businesses to provide strategic IT consulting
+                services aimed at aligning technology initiatives with business
+                goals. Our consultants offer expert guidance on IT strategy
+                development, digital transformation, IT infrastructure
+                optimization, and more.
+              </p>
+              <p>
+                <span className="aboutspan">Project Management:</span> We
+                provide project management expertise to oversee the successful
+                execution of IT projects from inception to completion. Our
+                proactive approach ensures that projects are delivered on time,
+                within budget, and to the highest quality standards.
+              </p>
             </div>
-            <div className="team-member">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Team Member 4"
-                className="team-photo"
-              />
-              <h3 className="team-name">Michael Brown</h3>
-              <p className="team-role">Lead Developer</p>
+          </div>
+
+          <div className="service">
+            {/* <img
+              src="/sample.jpeg"
+              alt="Consulting Services"
+              className="service-img"
+            /> */}
+            <div className="service-note">
+              {/* <h2>IT Consulting Services</h2> */}
+              <p>
+                TechNova Software, we are committed to delivering innovative
+                solutions and exceptional service to our clients. Whether you
+                are looking to develop cutting-edge software, enhance technical
+                skills through training, or leverage strategic IT insights, we
+                are here to help you achieve your business objectives.
+              </p>
             </div>
           </div>
         </section>
+        <div className="button-container">
+          <Link to="/internship">
+            <button className="creative-button">Internship</button>
+          </Link>
+
+          <Link to="/projects">
+            <button className="creative-button">Projects</button>
+          </Link>
+
+          <Link to="/training">
+            <button className="creative-button">Training</button>
+          </Link>
+        </div>
       </div>
     </Layout>
   );
