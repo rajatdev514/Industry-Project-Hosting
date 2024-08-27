@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Industry_Project
 =======
 <<<<<<< HEAD
@@ -76,3 +77,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 >>>>>>> 4a785fe (Basic Setup)
 >>>>>>> 62c7436 (Basic Setup)
+=======
+# Industry_Project
+>>>>>>> 891ae1a82d9cfac022a2c645d34e2f11a5ae59f9
