@@ -110,7 +110,7 @@
 }
 
 .navbar {
-  background-color: #1a1a1a;
+  background-color: #781b8f;
   padding: 8px;
 }
 
@@ -279,8 +279,7 @@
 /* ----- Contact ----- */
 
 .contact-page {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background: #e0f7fa;
   animation: gradient 15s ease infinite;
   color: #e0e0e0;
   padding: 60px 20px;
@@ -292,7 +291,7 @@
 
 .contact-title {
   font-size: 2.5rem;
-  color: #00d2ff;
+  color: #733686;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -417,14 +416,14 @@
 
 /* General Styles */
 .about-us {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background: #3e8f9a;
+  /* background-size: 400% 400%; */
   animation: gradient 15s ease infinite;
   color: #ffffff;
   padding: 40px 20px;
   font-family: "Arial", sans-serif;
 }
-@keyframes gradient {
+/* @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -434,7 +433,7 @@
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 .intro h1 {
   font-size: 2.5rem;
@@ -682,224 +681,287 @@
 
 /* home page*/
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Carousel Styles */
-.carousel {
+.full-screen-section {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.carousel img {
-  width: 100%;
-  display: block;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/* Enroll Button */
-.enroll-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.enroll-btn {
-  background-color: #28a745;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.enroll-btn:hover {
-  background-color: #218838;
-}
-
-/* Courses Section */
-.courses-container {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(75, 75, 75, 0.3)),
+    url("/public/home1.jpg") no-repeat center center/cover;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  padding-left: 5%; /* Add padding to the left to position content away from the edge */
+}
+
+.full-screen-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center; /* Center text within its container */
+  color: white;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+.tagline {
+  color: #00d2ff;
+}
+
+.tagline-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+}
+
+.fa-chevron-right {
+  color: #00d2ff;
+  margin: 10px;
+  margin-top: 6px;
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: bolder;
+}
+
+/* CSS */
+.btn {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5967d3 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 55px;
+  width: 8rem;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  /* padding-left: 16px;
+  padding-right: 16px; */
+  padding: 100px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 22px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.btn.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #0056b3;
+}
+
+.btn.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+.courses-title {
+  align-items: center;
+  text-align: center;
+  background-color: #e0f7fa;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #64b4c4;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 2rem;
+}
+
+.course-cards-container {
+  background-color: #e0f7fa;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
   padding: 20px;
+  align-items: center;
 }
 
 .course-card {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 300px;
-  padding: 15px;
+  background: linear-gradient(145deg, #8be5ef, #7b58a6);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
-.course-card img {
-  height: 250px;
+  padding: 20px;
+  align-items: center;
 }
 
 .course-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-.course-card img {
+.course-image {
   width: 100%;
-  border-radius: 5px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
-.course-card h3 {
+.course-title {
+  font-size: 1.4em;
+  color: #2c3e50;
   margin: 10px 0;
-  font-size: 20px;
-  color: #333;
 }
 
-.course-card p {
-  margin: 5px 0;
-  color: #666;
-}
-
-/* home page   */
-
-.main-container {
-  width: 100%;
-  background-color: rgb(210, 210, 221);
-
-  height: 650px;
-  margin: 0px auto;
-  background-image: url("https://media.istockphoto.com/id/1361844238/photo/high-school-professor-assisting-her-students-in-e-learning-on-laptop-in-the-classroom.jpg?s=2048x2048&w=is&k=20&c=zejjb8o-LSBKWh_FldgOUeapNrw4zsKKdxsTLtAH5XY=");
-  filter: drop-shadow(2rem);
-  background-size: cover;
-}
-.left {
-  width: 50%;
-  padding: 30px;
-}
-.left h1 {
-  color: rgb(37, 37, 87);
-  font-weight: 800;
-  margin-bottom: 15px;
-  margin-top: 60px;
-  font-size: 60px;
-}
-.left h4 {
+.course-description {
+  font-size: 1em;
   color: white;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-.left p {
-  font-size: 20px;
-  color: rgb(240, 225, 225);
-  margin-bottom: 40px;
-  font-weight: 800;
-}
-.btn {
-  width: 140px;
-  padding: 10px 10px;
-  background-color: #2575fc;
-  font-size: 20px;
-  color: white;
-}
-
-.middle {
-  width: 100%;
-  max-width: 1400px;
-  margin: 120px auto;
-  text-align: center;
-  padding: 40px 100px;
-}
-.middle p {
-  margin-top: 20px;
-}
-.one {
-  width: 230px;
-  padding: 10px;
-  text-align: center;
-}
-.wrapup {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 80px;
-}
-.one i {
-  font-size: 40px;
   margin-bottom: 15px;
 }
 
-.middle h2 {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 40px;
-}
-.heading {
-  margin-left: 150px;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.searchbtn {
-  text-align: center;
-  margin-bottom: 200px;
-}
-.searchbtn h3 {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  margin-top: 90px;
-}
-
-.search-box input {
-  width: 50%;
-  padding: 10px;
-  border-color: lightgrey;
-  font-size: 16px;
-}
-.search-box img {
-  margin-left: -40px;
-}
-
-.popular {
+.course-info {
   display: flex;
-  width: 50%;
-  justify-content: space-between;
-  margin-left: 380px;
-  margin-top: 30px;
+  justify-content: space-around;
+  margin-bottom: 15px;
 }
-.popular a {
-  font-size: 14px;
-  text-decoration: none;
+
+.course-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  color: #34495e;
+}
+
+.icon {
+  color: #2980b9;
+}
+
+.course-rating {
+  font-size: 1.3em;
+  color: #f1c40f;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .course-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .course-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .course-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    padding: 15px;
+  }
+
+  .course-title {
+    font-size: 1.3em;
+  }
+
+  .course-description {
+    font-size: 0.95em;
+  }
+
+  .course-detail {
+    font-size: 0.85em;
+  }
 }
 
 /* ----- Internship Page ----- */
@@ -1061,5 +1123,313 @@ body {
 
   .card-desc {
     font-size: 0.9rem;
+  }
+}
+
+/* Testimonial */
+.testimonials-main-title {
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #64c7da;
+  margin-bottom: 1.5rem;
+}
+.testimonial-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #f6ffa1; /* Light background color */
+  padding: 20px 0;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; /* Contain absolutely positioned cards */
+  width: max-content;
+}
+
+.testimonial-card {
+  display: inline-block;
+  width: 280px;
+  margin: 0 15px;
+  background: #ffffff; /* Card background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden; /* Prevent overflow of content */
+  position: relative; /* Position relative for z-index to work */
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth scaling */
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.testimonial-card h4 {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #777777;
+  white-space: normal; /* Allow paragraph to wrap */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  max-height: 3.6em; /* Show 2 lines of text */
+  transition: max-height 0.3s ease; /* Smooth transition for expanding */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.1); /* Enlarge the card on hover */
+  z-index: 10; /* Ensure it appears above other cards */
+  position: relative; /* Keep the enlarged card within the same flow */
+}
+
+.testimonial-card:hover p {
+  max-height: none; /* Reveal the full paragraph on hover */
+}
+
+/* Infinite scroll effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-280px * 3)); /* Adjusted to card width */
+  }
+}
+
+.testimonial-wrapper {
+  animation: scroll 60s linear infinite;
+}
+
+/* Card Color Variations */
+.testimonial-card.card-1 {
+  background: #e0f7fa;
+}
+.testimonial-card.card-2 {
+  background: #fff3e0;
+}
+.testimonial-card.card-3 {
+  background: #e8f5e9;
+}
+.testimonial-card.card-4 {
+  background: #fce4ec;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 200px; /* Adjusted width for tablets */
+    margin: 0 10px;
+  }
+
+  .testimonial-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 16px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 12px;
+  }
+
+  .testimonial-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 160px; /* Adjusted width for mobile devices */
+    margin: 0 5px;
+  }
+
+  .testimonial-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 14px;
+  }
+
+  .testimonial-card h4 {
+    font-size: 10px;
+  }
+
+  .testimonial-card p {
+    font-size: 10px;
+  }
+
+  .testimonial-wrapper {
+    animation: none; /* Disable scrolling animation on very small screens */
+  }
+}
+
+/* ----- Login ----- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Increased width for a larger form */
+  padding: 40px; /* Increased padding */
+  background-color: #e0f7fa;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for emphasis */
+  margin: 20px;
+  margin-left: 32rem;
+}
+
+.login-card {
+  width: 100%;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2.5rem; /* Larger title */
+  margin-bottom: 30px; /* Increased margin */
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px; /* Increased margin */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px; /* Larger padding for bigger input fields */
+  font-size: 1.1rem; /* Increased font size */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group label {
+  position: absolute;
+  left: 15px; /* Adjusted for larger input fields */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  background-color: #ffffff;
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #764ba2;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 0.85rem; /* Slightly larger label */
+  color: #764ba2;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px; /* Larger button */
+  font-size: 1.2rem; /* Increased font size */
+  color: #fff;
+  background-color: #764ba2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #667eea;
+}
+
+.forgot-password {
+  margin-top: 15px; /* Increased margin */
+}
+
+.forgot-password a {
+  color: #764ba2;
+  text-decoration: none;
+  font-size: 1rem; /* Increased font size */
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 400px;
+    padding: 30px;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .login-btn {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .forgot-password a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .login-title {
+    font-size: 1.75rem;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .forgot-password a {
+    font-size: 0.85rem;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../Layout/Layout";
 import { Link } from "react-router-dom";
-import Carousel from "react-bootstrap/Carousel";
+// import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "../Slider/Slider";
 
