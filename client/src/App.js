@@ -9,6 +9,8 @@ import Contact from "./components/Pages/Contact";
 import Projects from "./components/Pages/Projects";
 import Login from "./components/Pages/Login";
 import Register from "./components/Pages/Register";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
