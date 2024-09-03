@@ -94,9 +94,9 @@ const Internship = () => {
                 className="card-image"
                 style={{ backgroundImage: `url(${internship.image})` }}
               ></div>
-              <div className="card-content">
-                <h2 className="card-title">{internship.title}</h2>
-                <p className="card-desc">{internship.description}</p>
+              <div className="internship-card-content">
+                <h2 className="internship-card-title">{internship.title}</h2>
+                <p className="internship-card-desc">{internship.description}</p>
               </div>
             </a>
           ))}

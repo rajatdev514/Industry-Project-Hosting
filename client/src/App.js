@@ -11,6 +11,7 @@ import Login from "./components/Pages/Login";
 import Register from "./components/Pages/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Cards from "./components/Pages/Cards";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/course/:id" element={<Cards />} />
       </Routes>
     </>
   );

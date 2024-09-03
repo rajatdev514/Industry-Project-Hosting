@@ -82,8 +82,8 @@
 } */
 
 .navbar-nav .nav-link.active {
-  color: #00d2ff;
-  border-bottom: 2px solid #00d2ff;
+  color: #fff8f3;
+  border-bottom: 2px solid #fff8f3;
 }
 
 .navbar-nav .nav-link i {
@@ -105,12 +105,12 @@
 }
 
 .navbar-nav .nav-item .nav-link.active {
-  border-bottom: 2px solid #00d2ff;
-  color: #00d2ff;
+  border-bottom: 2px solid #fff8f3;
+  color: #fff8f3;
 }
 
 .navbar {
-  background-color: #781b8f;
+  background-color: #405d72;
   padding: 8px;
 }
 
@@ -132,7 +132,8 @@
 
 .logo-text h1 {
   font-size: 1.5rem;
-  color: #00d2ff;
+  font-weight: 800;
+  color: #def9c4;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -140,7 +141,7 @@
 
 .logo-text p {
   font-size: 0.9rem;
-  color: #e0e0e0;
+  color: #fff8f3;
   margin: 0;
   font-style: italic;
 }
@@ -151,7 +152,7 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #e0e0e0;
+  color: #b6d0e3;
   text-transform: uppercase;
   font-size: 1rem;
   padding: 10px;
@@ -159,7 +160,7 @@
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #00d2ff;
+  color: #fff8f3;
 }
 
 .navbar-nav .nav-item .nav-link i {
@@ -192,8 +193,8 @@
 /* -------- Footer ------- */
 
 .footer {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  background-color: #405d72;
+  color: #424242;
   padding: 40px 0;
   text-align: center;
   /* position: relative; */
@@ -211,7 +212,8 @@
 
 .footer-logo h3 {
   font-size: 1.8rem;
-  color: #00d2ff;
+  font-weight: 800;
+  color: #def9c4;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -226,7 +228,7 @@
 }
 
 .footer-links ul li a {
-  color: #e0e0e0;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease-in-out;
@@ -237,7 +239,7 @@
 }
 
 .footer-socials a {
-  color: #e0e0e0;
+  color: #9cbfc0;
   font-size: 1.5rem;
   margin: 0 10px;
   transition: color 0.3s ease-in-out;
@@ -250,9 +252,9 @@
 .footer-bottom {
   margin-top: 10px;
   font-size: 0.9rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid #ffffff;
   padding-top: 10px;
-  color: #7a7a7a;
+  color: #ffffff;
 }
 
 .footer-bottom p {
@@ -291,7 +293,8 @@
 
 .contact-title {
   font-size: 2.5rem;
-  color: #733686;
+  font-weight: 800;
+  color: #088395;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -308,7 +311,7 @@
 
 .contact-form {
   flex: 1;
-  background-color: #252525;
+  background-color: #088395;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -331,8 +334,8 @@
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #333;
-  color: #e0e0e0;
+  background-color: #99d1d8;
+  color: #000000;
   font-size: 1rem;
 }
 
@@ -345,7 +348,7 @@
 .contact-btn {
   width: 100%;
   padding: 12px;
-  background-color: #00d2ff;
+  background-color: #ffffff;
   color: #1a1a1a;
   font-size: 1.1rem;
   font-weight: bold;
@@ -361,7 +364,7 @@
 
 .contact-info {
   flex: 0.5;
-  background-color: #252525;
+  background-color: #088395;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -372,7 +375,8 @@
 
 .contact-info h3 {
   font-size: 1.5rem;
-  color: #00d2ff;
+  font-weight: 800;
+  color: #424242;
   margin-bottom: 20px;
 }
 
@@ -416,10 +420,9 @@
 
 /* General Styles */
 .about-us {
-  background: #3e8f9a;
-  /* background-size: 400% 400%; */
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
   animation: gradient 15s ease infinite;
-  color: #ffffff;
+  color: #424242;
   padding: 40px 20px;
   font-family: "Arial", sans-serif;
 }
@@ -437,6 +440,7 @@
 
 .intro h1 {
   font-size: 2.5rem;
+  font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -473,14 +477,16 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width: 90rem;
+  margin: auto;
 }
 
 .service {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-  padding: 20px;
+  background: #eeeeee;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
@@ -518,7 +524,7 @@
   }
 }
 .aboutspan {
-  color: #00d2ff;
+  color: #018eae;
 }
 
 .service-description h2 {
@@ -611,7 +617,7 @@
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+  background-image: linear-gradient(-20deg, #008972 0%, #55aca7 100%);
   border: 2px solid transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -969,7 +975,8 @@
 .internships-page {
   padding: 40px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  background-color: #cddcdc;
+  background-image: linear-gradient(-225deg, #b7f8db 0%, #50a7c2 100%);
   min-height: 100vh;
 }
 
@@ -1013,11 +1020,11 @@
   transition: color 0.3s ease-in-out;
 }
 
-.internships-title:hover,
+/* .internships-title:hover,
 .internships-desc:hover {
   color: #86ffd7;
   text-shadow: 0 0 8px rgba(16, 146, 126, 0.8);
-}
+} */
 
 /* Internship Cards Container */
 .internships-container {
@@ -1030,9 +1037,9 @@
 
 /* Individual Internship Card Styling */
 .internship-card {
-  width: 250px;
+  width: 350px;
   text-align: left;
-  background: linear-gradient(145deg, #25114a, #be4a56, #a8663a);
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -1058,7 +1065,7 @@
   transform: scale(1.05);
 }
 
-.card-content {
+.internship-card-content {
   padding: 12px;
   align-items: center;
   justify-content: center;
@@ -1066,9 +1073,10 @@
   /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
-.card-title {
+.internship-card-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #00cdac;
 
   /* animation: card-title-glow 1.5s ease-in-out infinite alternate; */
 }
@@ -1082,7 +1090,7 @@
   }
 } */
 
-.card-desc {
+.internship-card-desc {
   font-size: 1.2rem;
   color: #e0e0e0;
 }
@@ -1432,4 +1440,106 @@
   .forgot-password a {
     font-size: 0.85rem;
   }
+}
+
+/* --- Cards --- */
+.detail-page {
+  background-color: #e0f7fa;
+  padding: 4rem;
+}
+.detail-image {
+  width: 900px;
+  height: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.card-header {
+  display: flex;
+  margin: 100px;
+  margin-bottom: 20px;
+  gap: 60px;
+}
+.card-title {
+  font-size: 40px;
+  margin-left: 100px;
+  margin-top: 0;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.info p {
+  color: rgb(58, 177, 232);
+  font-size: 20px;
+  margin-top: 20px;
+}
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+}
+.meta-item span {
+  font-size: 20px;
+}
+.course-content {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.rating-star {
+  font-size: 20px;
+}
+
+.download {
+  padding: 15px 15px;
+  border-radius: 14px;
+  background-color: rgb(200, 200, 21);
+  border: none;
+  color: black;
+  margin-top: 40px;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.course-content ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.course-content ul li {
+  border: 1px solid grey;
+  width: fit-content;
+  padding: 10px;
+  margin: 3px;
+  margin-left: 0;
+  color: black;
+  border-top-left-radius: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.course-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.course-content p {
+  margin-bottom: 60px;
+}
+.clock {
+  height: 30px;
+  width: 30px;
+  color: grey;
+}
+.card-icon {
+  height: 30px;
+  width: 30px;
+  color: rgba(128, 128, 128, 0.612);
+}
+
+.dynamic {
+  display: flex;
+  gap: 8px;
 }
