@@ -27,7 +27,7 @@ const HomePage = () => {
         <div className="content">
           <h1 className="title">TechNova Software</h1>
           <div className="tagline-container">
-            <i className="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right "></i>
             <i className="fa-solid fa-chevron-right"></i>
             <i className="fa-solid fa-chevron-right"></i>
             <h5 className="tagline">Navigating Beyond Limits</h5>

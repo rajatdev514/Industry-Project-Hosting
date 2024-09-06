@@ -6,9 +6,18 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <div className="footer-logo">
-            <h3>TechNova</h3>
-          </div>
+        <Link className="navbar-brand" to="/">
+            <div className="logo-container">
+              <img
+                src="/tech.png"
+                alt="TechNova Software Logo"
+                className="logo-image"
+              />
+              <div className="logo-text">
+                <h1>TechNova Software</h1>
+              </div>
+            </div>
+          </Link>
           <div className="footer-links">
             <ul>
               <li>

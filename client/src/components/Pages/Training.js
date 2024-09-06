@@ -100,11 +100,25 @@ const Training = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="training-one">
         {" "}
         {/* Add ref to the parent div */}
-        <h1 className="courses-title">Check Out The Courses!!</h1>
+        <div className="left">
+        <h1 className="courses-title">Introducing our Courses</h1>
+        <p className="para-1">find interesting courses and get started  </p>
+        <p className="para-2">#UpgradeYourKnowledge</p>
+        <div className="tag">Give it a try!</div>
+
+        </div>
+        <div className="right">
+          <img src="https://image.freepik.com/free-vector/online-courses-concept_23-2148537621.jpg"/>
+
+        </div>
+      
+
       </div>
+
+      <h3 className="category-tag">Explore Our Categories</h3>
 
       <div className="course-cards-container">
         {courses.map((course) => (

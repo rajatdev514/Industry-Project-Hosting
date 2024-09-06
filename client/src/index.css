@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  
 }
 
 /* .navbar {
@@ -106,13 +108,20 @@
 
 .navbar-nav .nav-item .nav-link.active {
   border-bottom: 2px solid #fff8f3;
-  color: #fff8f3;
+  color: #1b92e6;
 }
 
 .navbar {
-  background-color: #405d72;
-  padding: 8px;
+  background-color: #F8EDE3;
+  padding: 8px ;
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+
+  
 }
+
 
 .navbar-brand {
   display: flex;
@@ -130,10 +139,11 @@
   margin-right: 15px;
 }
 
+
 .logo-text h1 {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #def9c4;
+  color: rgb(81, 81, 200);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -141,7 +151,7 @@
 
 .logo-text p {
   font-size: 0.9rem;
-  color: #fff8f3;
+  color: black;
   margin: 0;
   font-style: italic;
 }
@@ -152,7 +162,8 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #b6d0e3;
+  color: #1b92e6;
+  color:rgb(80, 77, 77);
   text-transform: uppercase;
   font-size: 1rem;
   padding: 10px;
@@ -160,7 +171,7 @@
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #fff8f3;
+  color: #1b92e6;
 }
 
 .navbar-nav .nav-item .nav-link i {
@@ -188,12 +199,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width:2240px;
+  margin-left:50px;
+
+  
 }
 
 /* -------- Footer ------- */
 
 .footer {
   background-color: #405d72;
+
   color: #424242;
   padding: 40px 0;
   text-align: center;
@@ -420,10 +436,8 @@
 
 /* General Styles */
 .about-us {
-  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
   animation: gradient 15s ease infinite;
   color: #424242;
-  padding: 40px 20px;
   font-family: "Arial", sans-serif;
 }
 /* @keyframes gradient {
@@ -437,25 +451,41 @@
     background-position: 0% 50%;
   }
 } */
-
+.intro{
+  background: linear-gradient(to right, rgba(154, 205, 235, 0.853), rgba(61, 143, 237, 0.744)),
+  url("https://thumbs.dreamstime.com/b/teamwork-manager-portrait-diversity-office-team-happy-hr-collaboration-hiring-us-company-our-vision-working-270355481.jpg") no-repeat center center/cover;
+  height:350px;
+}
 .intro h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color:white;
+  padding-top:100px;
 }
 
-.intro p {
-  font-size: 1.2rem;
+.intro-p {
+  font-size: 1.4rem;
   margin-bottom: 40px;
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgba(221, 164, 21, 0.811);
+  font-weight:500;
+  border-radius:12px;
+  padding:70px;
+  color:rgba(0, 0, 0, 0.822);
+  position:relative;
+  bottom:130px;
 }
 
+.random{
+  color:rgb(84, 84, 198);
+}
 /* Carousel Section */
 /* .carousel-section {
   margin-bottom: 50px;
@@ -475,25 +505,34 @@
 /* Service Section */
 .service-section {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 90rem;
-  margin: auto;
+  gap:20px;
+  
+  
+  width: 100%;
+  padding:40px;
+  position:relative;
+
+  
 }
 
 .service {
-  display: flex;
-  flex-direction: row;
+  
   align-items: center;
   background: #eeeeee;
-  padding: 5px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  text-align:center;
+  box-sizing: border-box;
+
+
 }
 
+
 .service-img {
-  width: 30%;
+  width: 40%;
   border-radius: 10px;
+  margin-bottom:40px;
   /* margin-right: 20px; */
 }
 
@@ -501,15 +540,18 @@
   flex: 1;
   align-items: center;
   text-align: justify;
+  text-align:center;
+
   /* margin: 8rem; */
-  margin: 4rem;
 }
+.add{
+  margin-top:50px;
+}
+
 .service-note {
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
-  margin-left: 8rem;
-  margin-right: 8rem;
 }
 @media (max-width: 768px) {
   .service-note {
@@ -525,12 +567,35 @@
 }
 .aboutspan {
   color: #018eae;
+  font-size:20px;
 }
 
 .service-description h2 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color:rgb(1, 1, 5);
+  font-weight:bold;
+  
+  
+  
   /* margin-left: 7rem; */
+}
+.service-heading{
+  margin-left:37%;
+  font-size:50px;
+  font-weight:bold;
+  color:black;
+
+
+
+}
+.hr{
+  width:30%;
+  margin-top:0;
+
+  margin-left:32%;
+  color:rgb(43, 142, 241);
+  border:3px solid rgb(13, 160, 234);
 }
 
 .service-description p {
@@ -544,7 +609,6 @@
 /* Responsive Styles */
 @media (max-width: 992px) {
   .service {
-    flex-direction: column;
   }
 
   .service-img {
@@ -749,6 +813,8 @@
   justify-content: center;
   flex-wrap: wrap;
   font-weight: bolder;
+  
+  
 }
 
 /* CSS */
@@ -765,7 +831,6 @@
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #fff;
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
@@ -788,6 +853,8 @@
   white-space: nowrap;
   will-change: box-shadow, transform;
   font-size: 22px;
+  color: white;
+
 }
 
 .button-29:focus {
@@ -854,16 +921,75 @@
     font-size: 0.85rem;
   }
 }
+.training-one{
+ display:flex;
+ gap:120px; 
+ margin-left:40px;
+ padding-top:60px;
+ 
+}
+.left{
+  display:flex;
+  flex-direction: column;
+  text-align:flex-start;
+  margin-left:73px;
+  padding:2rem;
+  box-sizing: border-box;
+
+}
+.category-tag{
+  color:black;
+  font-size:30px;
+  font-weight:600;
+  margin-left:140px;
+  margin-top:120px;
+  margin-bottom:20px;
+}
+.tag{
+  background-color: rgb(221, 164, 21);
+  color:black;
+  padding:5px;
+  width:180px;
+  font-size:16px;
+  font-weight:700;
+  border-radius:12px;
+  text-align:center;
+  margin-top:60px;
+}
+.right{
+  width:400px;
+  height:120px;
+  background-color: yellow;
+  border-radius:12px;
+}
+.right img{
+  width:400px;
+  height:400px;
+}
 .courses-title {
-  align-items: center;
-  text-align: center;
   background-color: #e0f7fa;
   font-size: 3rem;
   font-weight: 800;
-  color: #64b4c4;
-  margin-top: 1rem;
+  color: #2f6d79;
   margin-bottom: 0;
-  padding: 2rem;
+  padding: 0.5rem;
+}
+.para-1{
+  color:black;
+  font-size:22px;
+  padding-left:20px;
+  margin-top:0;
+  margin-bottom:0;
+  padding-bottom:0;
+
+}
+.para-2{
+  color:grey;
+  font-size:22px;
+  font-weight:bold;
+  padding-left:20px;
+  margin-top:0;
+  padding-top:0;
 }
 
 .course-cards-container {
@@ -873,6 +999,8 @@
   gap: 50px;
   padding: 20px;
   align-items: center;
+  margin-left:70px;
+  margin-right:70px;
 }
 
 .course-card {
@@ -973,34 +1101,32 @@
 /* ----- Internship Page ----- */
 /* General Page Styling */
 .internships-page {
-  padding: 40px 20px;
   text-align: center;
-  background-color: #cddcdc;
-  background-image: linear-gradient(-225deg, #b7f8db 0%, #50a7c2 100%);
   min-height: 100vh;
 }
 
 /* Header Section Styling */
 .internships-header {
   margin-bottom: 40px;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  padding: 40px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: inline-block;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  background-color: lightgrey;
+  height:400px;
+
 }
 
 .internships-title {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #2f6d79;
+  font-weight:bold;
   position: relative;
   display: inline-block;
   animation: text-fade-in 1s ease-in-out forwards;
   opacity: 0;
+  margin-top:80px;
 }
 
 @keyframes text-fade-in {
@@ -1016,8 +1142,37 @@
 
 .internships-desc {
   font-size: 1.2rem;
-  color: #e0e0e0;
+  color: rgba(0, 0, 0, 0.763);
   transition: color 0.3s ease-in-out;
+  width:70%;
+  margin:auto;
+  margin-bottom:40px;
+}
+.hashtag{
+  color:rgba(0, 0, 0, 0.674);
+  font-weight:450;
+  font-size:20px;
+  padding:15px;
+  border-radius:12px;
+  font-weight:bold;
+  background-color: rgb(231, 172, 34);
+  display:inline-block;
+}
+.intern-title{
+  font-size:40px;
+  font-weight:600;
+  padding:20px;
+
+}
+.extra{
+  color:black;
+  font-size:30px;
+}
+.intern-container{
+  display:flex;
+  align-items:center;
+  margin-left:25%;
+
 }
 
 /* .internships-title:hover,
@@ -1039,7 +1194,7 @@
 .internship-card {
   width: 350px;
   text-align: left;
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  background-color: white;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -1092,9 +1247,16 @@
 
 .internship-card-desc {
   font-size: 1.2rem;
-  color: #e0e0e0;
+  color: #120c0cd2;
 }
-
+.intern-btn{
+  background-color:rgba(255, 255, 0, 0.832);
+  padding:10px 40px;
+  border-radius:12px;
+  color:black;
+  border:none;
+  font-size:18px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .internships-title {
@@ -1148,6 +1310,7 @@
   overflow: hidden;
   position: relative;
   background: #f6ffa1; /* Light background color */
+  background-color: lightgrey;
   padding: 20px 0;
 }
 

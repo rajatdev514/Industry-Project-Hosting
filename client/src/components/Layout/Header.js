@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+
+
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const headingStyle = {
+    position:'sticky',
+    top:'0',
+    
+    
+  };
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -10,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav style={headingStyle} className="navbar   navbar-expand-lg" >
         <div className="container">
           <Link className="navbar-brand" to="/">
             <div className="logo-container">
