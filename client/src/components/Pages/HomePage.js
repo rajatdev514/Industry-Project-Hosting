@@ -1,25 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import { FaClock, FaCertificate, FaStar } from "react-icons/fa";
-import Testimonial from "./Testimonial";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 
 const HomePage = () => {
   const [auth, setAuth] = useAuth();
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     setAuth({
-      ...auth,
       user: null,
       token: "",
     });
     localStorage.removeItem("auth");
     navigate("/");
-    toast.success("Logout Successfull");
+    toast.success("Logout Successful");
   };
-
-  const navigate = useNavigate();
 
   return (
     <Layout>
@@ -27,7 +24,7 @@ const HomePage = () => {
         <div className="content">
           <h1 className="title">TechNova Software</h1>
           <div className="tagline-container">
-            <i className="fa-solid fa-chevron-right "></i>
+            <i className="fa-solid fa-chevron-right"></i>
             <i className="fa-solid fa-chevron-right"></i>
             <i className="fa-solid fa-chevron-right"></i>
             <h5 className="tagline">Navigating Beyond Limits</h5>
@@ -52,17 +49,13 @@ const HomePage = () => {
                 </button>
               </>
             ) : (
-              <>
-                <button className="btn" onClick={handleLogout}>
-                  Logout
-                </button>
-              </>
+              <button className="btn" onClick={handleLogout}>
+                Logout
+              </button>
             )}
           </div>
         </div>
       </div>
-
-      <Testimonial />
     </Layout>
   );
 };

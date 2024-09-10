@@ -7,18 +7,18 @@ const AuthProvider = ({ children }) => {
     user: null,
     token: "",
   });
+
   useEffect(() => {
     const data = localStorage.getItem("auth");
     if (data) {
       const parseData = JSON.parse(data);
       setAuth({
-        ...auth,
-        user: parseData.user,
+        user: parseData.user, // avoid spreading stale state
         token: parseData.token,
       });
     }
-    //eslint-disable-next-line
-  }, []);
+  }, []); // no need to include auth in the dependency array
+
   return (
     <AuthContext.Provider value={[auth, setAuth]}>
       {children}

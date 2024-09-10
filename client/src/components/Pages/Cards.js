@@ -1,10 +1,12 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { FaClock, FaCertificate, FaStar } from "react-icons/fa";
+import { useNavigate, useParams } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import { CiClock2 } from "react-icons/ci";
 import { MdOutlineLibraryBooks } from "react-icons/md";
 import { PiGraduationCapLight } from "react-icons/pi";
+import { FaStar } from "react-icons/fa";
+import { useAuth } from "../../context/auth";
+import toast from "react-hot-toast";
 
 const courses = [
   {
@@ -224,16 +226,32 @@ const courses = [
 const Cards = () => {
   const { id } = useParams();
   const course = courses.find((course) => course.id === parseInt(id));
+  const [auth] = useAuth();
+  const navigate = useNavigate();
 
   if (!course) {
     return <div>Course not found</div>;
   }
 
+  const handleDownload = () => {
+    if (auth && auth.token) {
+      window.open("/Rajat_Mahajan.pdf");
+    } else {
+      navigate("/login"); // redirect to login if not authenticated
+      toast.error("You need to be logged in to download the syllabus.");
+    }
+  };
+
   return (
     <Layout>
       <div className="detail-page">
+        <h1 className="card-title">{course.title}</h1>
         <div className="card-header">
-          <img src={course.image} alt={course.title} className="detail-image" />
+          <img
+            src={course.image}
+            alt={`${course.title} Course`}
+            className="detail-image"
+          />
 
           <div className="info">
             <p>Course includes</p>
@@ -287,11 +305,12 @@ const Cards = () => {
                 </div>
               </div>
 
-              <button className="download">Download syllabus</button>
+              <button className="download" onClick={handleDownload}>
+                Download syllabus
+              </button>
             </div>
           </div>
         </div>
-        <h1 className="card-title">{course.title}</h1>
 
         <div className="course-content">
           <p>{course.description}</p>

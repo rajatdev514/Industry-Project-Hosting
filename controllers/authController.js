@@ -5,6 +5,7 @@ import JWT from "jsonwebtoken";
 export const registerController = async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
+
     // validation
     if (!name) {
       return res.send({
@@ -21,11 +22,30 @@ export const registerController = async (req, res) => {
         message: "Password is required",
       });
     }
+    // Check if the password length is at least 8 characters
+    if (password.length < 8) {
+      return res.send({
+        message: "Password should be at least 8 characters long",
+      });
+    }
     if (!phone) {
       return res.send({
         message: "Phone No is required",
       });
     }
+    // Check if the phone number is exactly 10 digits long
+    if (phone.length !== 10) {
+      return res.send({
+        message: "Phone number should be exactly 10 digits long",
+      });
+    }
+    // check if the phone number contains only digits
+    if (!/^\d{10}$/.test(phone)) {
+      return res.send({
+        message: "Phone number should contain only digits",
+      });
+    }
+
     // check user
     const existingUser = await userModel.findOne({ email });
     // check existing user
@@ -93,7 +113,7 @@ export const loginController = async (req, res) => {
     });
     res.status(200).send({
       success: true,
-      message: "Login successfull",
+      message: "Login successful",
       user: {
         name: user.name,
         email: user.email,

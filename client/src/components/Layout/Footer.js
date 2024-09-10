@@ -6,14 +6,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-        <Link className="navbar-brand" to="/">
-            <div className="logo-container">
+          <Link className="footer-brand" to="/">
+            <div className="footer-logo-container">
               <img
                 src="/tech.png"
                 alt="TechNova Software Logo"
-                className="logo-image"
+                className="footer-logo-image"
               />
-              <div className="logo-text">
+              <div className="footer-logo-text">
                 <h1>TechNova Software</h1>
               </div>
             </div>

@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  width:70%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -12,7 +12,7 @@
 
 .slide-image {
   width: 90%;
-  height: auto;
+  height: 500px;
   transition: opacity 0.5s ease-in-out;
   border-radius: 10px;
 }
@@ -29,7 +29,7 @@
   padding: 10px;
 }
 .arrow:hover {
-  color: rgb(26, 198, 198);
+  color: rgb(172, 26, 198);
 }
 
 .indicators {
@@ -51,5 +51,5 @@
 }
 
 .indicator.active {
-  background-color: #333;
+  background-color: #762776;
 }
