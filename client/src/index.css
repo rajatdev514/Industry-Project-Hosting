@@ -99,6 +99,7 @@ body {
 .navbar {
   /* background-image: linear-gradient(to top, #000000 0%, #ffffff 100%); */
   background-color: #67147e;
+  background-color: rgb(32, 159, 205);
   padding: 8px;
   position: sticky;
   top: 0;
@@ -462,13 +463,18 @@ body {
   /* max-height: 100vh; */
 }
 
+
 .contact-title {
   font-size: 2.5rem;
   font-weight: 800;
   color: #252525;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.box{
+  text-align:center;
+  width:700px;
 }
 
 .contact-container {
@@ -476,8 +482,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
+
 }
 
 .contact-form {
@@ -486,6 +493,7 @@ body {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-top:80px;
 }
 
 .form-group {
@@ -519,7 +527,8 @@ body {
 .contact-btn {
   width: 100%;
   padding: 12px;
-  background-color: #ffffff;
+    background-color: #c37cce;
+  
   color: #000000;
   font-size: 1.1rem;
   font-weight: bold;
@@ -530,18 +539,22 @@ body {
 }
 
 .contact-btn:hover {
-  background-color: #c37cce;
+  background-color: #edcaf3;
 }
 
 .contact-info {
   flex: 0.5;
-  background-color: #ffffff;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.contact-info img{
+  width:400px;
+  height:300px;
+  margin-bottom:60px;
+
 }
 
 .contact-info h3 {
@@ -558,6 +571,16 @@ body {
   align-items: center;
   gap: 10px;
 }
+.contact-info p i{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  border:1px solid rgba(128, 0, 128, 0.615);
+  color:rgba(128, 0, 128, 0.615);
+  text-align:center;
+  padding-top:10px;
+  font-size:24px;
+}
 
 .contact-socials {
   display: flex;
@@ -566,7 +589,7 @@ body {
 }
 
 .contact-socials a {
-  color: #000000;
+  color:rgba(128, 0, 128, 0.615);
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -1523,28 +1546,48 @@ body {
 
 /* ----- Login ----- */
 .login-container {
-  display: flex;
   justify-content: center;
+  display:flex;
+  gap:10px;
+
   align-items: center;
   width: 100%;
-  max-width: 500px; /* Increased width for a larger form */
-  padding: 40px; /* Increased padding */
+  max-width: 1300px; /* Increased width for a larger form */
+  padding: 20px; /* Increased padding */
   background-color: #e0f7fa;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for emphasis */
-  margin: 20px;
-  margin-left: 32rem;
+  margin-left: 10rem;
+  padding-top: 1  0px;
+  height:650px;
+  
 }
-
+.main-body{
+  background-image: url('https://t3.ftcdn.net/jpg/00/94/25/52/360_F_94255289_bLOLo8dVkESH4wP4QNVUg4hWBlcBEEOg.jpg');
+  margin-top:0;
+  height:730px;
+  padding-top:50px;
+  
+}
+.register-logo{
+  height:80px;
+  width:80px;
+}
 .login-card {
-  width: 100%;
+  width: 80%;
   text-align: center;
+
+}
+.register-changes{
+  padding:20px;
+  text-align:center;
 }
 
 .login-title {
-  font-size: 2.5rem; /* Larger title */
+  font-size: 3rem; /* Larger title */
   margin-bottom: 30px; /* Increased margin */
   color: #333;
+  font-weight:bold;
 }
 
 .input-group {
@@ -1553,7 +1596,7 @@ body {
 }
 
 .input-group input {
-  width: 100%;
+  width: 80%;
   padding: 15px; /* Larger padding for bigger input fields */
   font-size: 1.1rem; /* Increased font size */
   border: 1px solid #ccc;
@@ -1562,16 +1605,32 @@ body {
   color: #333;
   outline: none;
   transition: border-color 0.3s ease;
+  margin-left:40px;
+  
 }
+.recheck p{
+  margin:3px;
+  
+}
+.recheck{
+  margin-top:20px;
+}
+.wrap{
+  display:flex;
+  gap:10rem;
+  margin-left:40px;
+  
+  margin-bottom:10px;
 
+}
 .input-group label {
   position: absolute;
-  left: 15px; /* Adjusted for larger input fields */
   top: 50%;
+  left:60px;
   transform: translateY(-50%);
   padding: 0 5px;
   background-color: #ffffff;
-  color: #aaa;
+  color: #242121;
   font-size: 1rem;
   pointer-events: none;
   transition: top 0.3s ease, font-size 0.3s ease;
@@ -1589,7 +1648,7 @@ body {
 }
 
 .login-btn {
-  width: 100%;
+  width: 80%;
   padding: 15px; /* Larger button */
   font-size: 1.2rem; /* Increased font size */
   color: #fff;
@@ -1598,6 +1657,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left:-32px;
 }
 
 .login-btn:hover {

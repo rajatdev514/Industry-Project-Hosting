@@ -35,10 +35,34 @@ const Register = () => {
   };
 
   return (
-    <Layout>
+
+   <div className="main-body">
       <div className="login-container">
+
+
+        <div className="register-changes">
+          <img className="register-logo" src="/tech.png"/>
+          <h1>Technova Softwares</h1>
+          <p>Navigating Beyond Limits</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s"/>
+           <p>
+           "Join our community to kickstart your data career. Register for top courses, internships, and projects to become a skilled data professional."</p>
+
+        </div>
+
+
+
         <div className="login-card">
-          <h2 className="login-title">Register</h2>
+
+         <div className="wrap">
+         <h2 className="login-title">Register</h2>
+
+
+      
+         </div>
+
+          
+         
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <input
@@ -84,9 +108,16 @@ const Register = () => {
               Register
             </button>
           </form>
+
+          <div className="recheck">
+       <p>already have an account?</p>
+        <p>login</p>
+
+        </div>
+
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
