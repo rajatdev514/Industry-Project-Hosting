@@ -104,18 +104,14 @@ const Training = () => {
         {" "}
         {/* Add ref to the parent div */}
         <div className="left">
-        <h1 className="courses-title">Introducing our Courses</h1>
-        <p className="para-1">find interesting courses and get started  </p>
-        <p className="para-2">#UpgradeYourKnowledge</p>
-        <div className="tag">Give it a try!</div>
-
+          <h1 className="courses-title">INTRODUCING OUR COURSES</h1>
+          <p className="para-1">Find interesting courses and get started </p>
+          <p className="para-2">#UpgradeYourKnowledge</p>
+          <div className="tag">Give it a try!</div>
         </div>
         <div className="right">
-          <img src="https://image.freepik.com/free-vector/online-courses-concept_23-2148537621.jpg"/>
-
+          <img src="/training-img.png" alt="training" />
         </div>
-      
-
       </div>
 
       <h3 className="category-tag">Explore Our Categories</h3>

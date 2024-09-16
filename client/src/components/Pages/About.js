@@ -9,19 +9,21 @@ const About = () => {
   return (
     <Layout>
       <div className="about-us">
-        <section className="intro">
-          <h1>Who We Are ?</h1>
-        </section>
-        <p className="intro-p">
-          " <span className="random">TechNova Software</span> specializes in
-          providing comprehensive software development, skill-based training,
-          and consulting services to a diverse range of clients. Our firm
-          combines technical expertise with strategic insights to deliver
-          tailored solutions that empower businesses to thrive in the digital
-          age."
-        </p>
+        <div className="aboutus-header">
+          <section className="intro">
+            <h1>Who We Are ?</h1>
+          </section>
+          <p className="intro-p">
+            " <span className="random">TechNova Software</span> specializes in
+            providing comprehensive software development, skill-based training,
+            and consulting services to a diverse range of clients. Our firm
+            combines technical expertise with strategic insights to deliver
+            tailored solutions that empower businesses to thrive in the digital
+            age."
+          </p>
+        </div>
 
-        <Slider />
+        {/* <Slider /> */}
 
         <div className="service-heading">Our Services</div>
         <hr className="hr" />

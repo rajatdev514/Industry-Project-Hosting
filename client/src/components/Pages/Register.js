@@ -34,37 +34,34 @@ const Register = () => {
     }
   };
 
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
   return (
-
-   <div className="main-body">
+    <div className="main-body">
       <div className="login-container">
-
-
         <div className="register-changes">
-          <img className="register-logo" src="/tech.png"/>
+          <img className="register-logo" src="/tech2.png" />
           <h1>Technova Softwares</h1>
           <p>Navigating Beyond Limits</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s"/>
-           <p>
-           "Join our community to kickstart your data career. Register for top courses, internships, and projects to become a skilled data professional."</p>
-
+          <img src="register-logo.png" alt="register-img" />
+          <p>
+            "Join our community to kickstart your data career. Register for top
+            courses, internships, and projects to become a skilled data
+            professional."
+          </p>
         </div>
 
-
-
         <div className="login-card">
+          <div className="wrap">
+            <h2 className="login-title">
+              Register <i class="fas fa-user-check"></i>
+            </h2>
+          </div>
 
-         <div className="wrap">
-         <h2 className="login-title">Register</h2>
-
-
-      
-         </div>
-
-          
-         
           <form onSubmit={handleSubmit}>
-            <div className="input-group">
+            <div className="input-group starlabel">
               <input
                 type="text"
                 value={name}
@@ -73,7 +70,7 @@ const Register = () => {
               />
               <label>Name</label>
             </div>
-            <div className="input-group">
+            <div className="input-group starlabel">
               <input
                 type="tel"
                 value={phone}
@@ -82,7 +79,7 @@ const Register = () => {
               />
               <label>Mobile Number</label>
             </div>
-            <div className="input-group">
+            <div className="input-group starlabel">
               <input
                 type="email"
                 value={email}
@@ -91,7 +88,7 @@ const Register = () => {
               />
               <label>Email</label>
             </div>
-            <div className="input-group">
+            <div className="input-group starlabel">
               <input
                 type="password"
                 value={password}
@@ -105,16 +102,24 @@ const Register = () => {
               <label>Security Question: Your first pet's name?</label>
             </div> */}
             <button type="submit" className="login-btn">
-              Register
+              Register <i class="fas fa-smile"></i>
             </button>
           </form>
 
           <div className="recheck">
-       <p>already have an account?</p>
-        <p>login</p>
-
-        </div>
-
+            <p>Already have an account?</p>
+            <button
+              className="login-btn-registerpage"
+              onClick={handleLoginClick}
+            >
+              Login
+            </button>
+            <p>
+              By signing up, you agree to <br />
+              our <span className="terms">Terms and Conditions</span> and{" "}
+              <span className="terms">Privacy Policy</span>.
+            </p>
+          </div>
         </div>
       </div>
     </div>

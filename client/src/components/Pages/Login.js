@@ -39,40 +39,34 @@ const Login = () => {
     }
   };
 
+  const handleRegisterClick = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="main-body">
-      
       <div className="login-container">
-
-
-      <div className="register-changes">
-          <img className="register-logo" src="/tech.png"/>
+        <div className="register-changes">
+          <img className="register-logo" src="/tech2.png" />
           <h1>Technova Softwares</h1>
           <p>Navigating Beyond Limits</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s"/>
-           <p>
-           "Join our community to kickstart your data career. Register for top courses, internships, and projects to become a skilled data professional."</p>
-
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s" />
+          <p>
+            "Join our community to kickstart your data career. Register for top
+            courses, internships, and projects to become a skilled data
+            professional."
+          </p>
         </div>
 
-
-
         <div className="login-card">
-
-
-        <div className="wrap">
-         <h2 className="login-title">Login</h2>
-
-
-      
-
-         </div>
-
-
-
+          <div className="wrap">
+            <h2 className="login-title">
+              Login <i class="fa-solid fa-user-plus"></i>
+            </h2>
+          </div>
 
           <form onSubmit={handleSubmit}>
-            <div className="input-group">
+            <div className="input-group starlabel">
               <input
                 type="email"
                 value={email}
@@ -81,7 +75,7 @@ const Login = () => {
               />
               <label>Email</label>
             </div>
-            <div className="input-group">
+            <div className="input-group starlabel">
               <input
                 type="password"
                 value={password}
@@ -96,14 +90,22 @@ const Login = () => {
             </button>
           </form>
           <div className="recheck">
-       <p>Don't have  account?</p>
-        <p>Register</p>
-
-        </div>
+            <p>Don't have account?</p>
+            <button
+              className="login-btn-registerpage"
+              onClick={handleRegisterClick}
+            >
+              Register
+            </button>
+            <p>
+              By signing up, you agree to <br />
+              our <span className="terms">Terms and Conditions</span> and{" "}
+              <span className="terms">Privacy Policy</span>.
+            </p>
+          </div>
         </div>
       </div>
-
-      </div>
+    </div>
   );
 };
 

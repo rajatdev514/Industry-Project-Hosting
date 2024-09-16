@@ -4,23 +4,21 @@ import Layout from "../Layout/Layout";
 const Contact = () => {
   return (
     <Layout>
-      
       <div className="contact-page">
-
         <div className="tint">
-
-        <div className="box">
-        <h2 className="contact-title">Have Some Questions?</h2>
-        <p>Thank you for considering our services. Kindly fill out the form below or email us at [Sayedkunsten], and we will respond to your inquiry promptly.</p>
-
+          <div className="box">
+            <h2 className="contact-title">Have Some Questions?</h2>
+            <p>
+              Thank you for considering our services. Kindly fill out the form
+              below or email us at [Sayedkunsten], and we will respond to your
+              inquiry promptly.
+            </p>
+          </div>
         </div>
-        </div>
-       
+
         <div className="contact-container">
-
-              <div className="contact-info">
-
-            <img  src="https://png.pngtree.com/element_our/20200610/ourlarge/pngtree-contact-us-image_2243642.jpg"/>
+          <div className="contact-info">
+            <img className="contact-img" src="/contact-img.png" alt="contact" />
             <p>
               <i className="fas fa-map-marker-alt"></i> Pune, Maharashtra, India
             </p>
@@ -62,7 +60,6 @@ const Contact = () => {
             </div> */}
           </div>
 
-
           <form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -89,7 +86,6 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-         
         </div>
       </div>
     </Layout>
