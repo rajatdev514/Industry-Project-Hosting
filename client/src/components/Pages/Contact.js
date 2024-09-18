@@ -18,7 +18,7 @@ const Contact = () => {
 
         <div className="contact-container">
           <div className="contact-info">
-            <img className="contact-img" src="/contact-img.png" alt="contact" />
+            <img className="contact-img" src="/contact.gif" alt="contact" />
             <p>
               <i className="fas fa-map-marker-alt"></i> Pune, Maharashtra, India
             </p>

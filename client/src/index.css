@@ -120,10 +120,10 @@ body {
 }
 
 .logo-image {
-  width: 60px;
+  width: 50px;
   margin-right: 15px;
-  background-image: linear-gradient(135deg, #d4d5d6 0%, #969fad 100%);
-  border-radius: 15px;
+  /* background-image: linear-gradient(135deg, #d4d5d6 0%, #969fad 100%); */
+  /* border-radius: 15px; */
 }
 
 .logo-text h1 {
@@ -620,63 +620,52 @@ body {
 
 /* General Styles */
 .about-us {
-  animation: gradient 15s ease infinite;
-  color: #424242;
+  animation: gradient 15s ease infinite, fadeIn 2s ease-in;
+  color: #ffffff;
   font-family: "Arial", sans-serif;
+  padding: 20px;
 }
+
 .aboutus-header {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  background-color: lightgrey;
-  display:flex;
-  margin-bottom:30px;
-  padding-bottom:20px;
-  height:550px;
-
-}
-.right-para img{
-  width:100%;
-  height:600px;
-  margin-bottom:0;
-  display:flex;
-
+  background: url("/public/1.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  height: auto;
+  max-height: 600px;
 }
 
-/* .intro {
-  background: linear-gradient(
-      to right,
-      rgba(166, 211, 237, 0.853),
-      rgba(169, 192, 219, 0.744)
-    ),
-    url("https://thumbs.dreamstime.com/b/teamwork-manager-portrait-diversity-office-team-happy-hr-collaboration-hiring-us-company-our-vision-working-270355481.jpg")
-      no-repeat center center/cover;
-  height: 350px;
-} */
+.right-para img {
+  width: 100%;
+  margin-top: 5rem;
+  height: auto;
+  display: block;
+}
+
 .intro h1 {
-  /* font-family: "PT Sans", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  font-style: normal; */
   font-family: "Playpen Sans", cursive;
-  font-optical-sizing: auto;
   font-size: 3rem;
   font-weight: 700;
   font-style: normal;
+  animation: text-fade-in 1s ease-in-out forwards;
+  opacity: 0;
   margin-bottom: 8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgb(0, 0, 0);
-  padding-top: 120px;
-  margin-left:50px;
+  padding-top: 6rem;
+  margin-left: 50px;
 }
 
 .intro-p {
   font-size: 1.4rem;
   text-align: center;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: rgba(193, 141, 211, 0.692);
   font-weight: 500;
   border-radius: 12px;
@@ -684,54 +673,11 @@ body {
   color: rgba(0, 0, 0, 0.822);
   position: relative;
   bottom: 100px;
-  margin-left:50px;
+  margin-left: 50px;
 }
 
 .random {
   color: rgb(84, 84, 198);
-}
-
-.about-social{
-  z-index:120;
-  color:black;
-}
-
-/* Service Section */
-.service-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
-
-}
-
-.service {
-  /* background: #eeeeee; */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 450px;
-  text-align: center;
-  box-sizing: border-box;
-  
-}
-
-.service-img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.service-description {
-  flex: 1;
-  text-align: center;
-  font-size: 1rem;
-  margin: 20px 0;
 }
 
 .service-heading {
@@ -744,97 +690,305 @@ body {
   font-size: 3rem;
   font-weight: 700;
   font-style: normal;
+  animation: text-fade-in 1s ease-in-out forwards;
 }
 
 .hr {
   width: 30%;
   margin: 0 auto;
-  color: rgb(43, 142, 241);
-  border: 3px solid rgb(55, 16, 83);
+  border: none;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(45deg, rgb(56, 137, 174), rgb(23, 125, 160));
+  border-image-slice: 1;
   margin-bottom: 40px;
+  animation: text-fade-in 1s ease-in-out forwards;
 }
 
-.service-description p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.service-note {
+  background-color: rgba(222, 222, 222, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 90%;
+}
+
+.service-note-text {
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+/* Service Section */
+.service-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  border: 2px solid rgb(38, 156, 163);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  animation: text-fade-in 1s ease-in-out forwards;
+}
+
+.service-img-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.service-img1 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  animation: text-fade-in 1s ease-in-out forwards;
+}
+.service-img2 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  animation: text-fade-in 1s ease-in-out forwards;
+}
+.service-img3 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  animation: text-fade-in 1s ease-in-out forwards;
+}
+
+.service-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  animation: text-fade-in 1s ease-in-out forwards;
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #212121;
   margin-bottom: 10px;
 }
 
-.service-description h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: rgb(1, 1, 5);
-  font-weight: bold;
+.service-text p {
+  font-size: 1.2rem;
+  color: #131313;
 }
 
-.aboutspan {
-  color: #018eae;
-  font-size: 20px;
+.service-text strong {
+  color: #064b64;
 }
 
-/* Service Note */
-.service-note {
-  /* padding: 80px; */
-  /* background-color: #dbe2e4;
-  border-radius: 20px;
-  margin: 30px; */
+.reverse-row {
+  flex-direction: row-reverse;
 }
-.service-note-text {
-  font-size: 1.4rem;
-  /* margin-bottom: 40px; */
+
+.button-container {
   text-align: center;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(222, 222, 222, 0.811);
-  font-weight: 500;
-  border-radius: 12px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: rgba(0, 0, 0, 0.822);
-  /* position: relative; */
-  bottom: 130px;
+  margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-  .service-section {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+/* .creative-button {
+  background-color: #018eae;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
+.creative-button:hover {
+  background-color: #016c8c;
+  transform: scale(1.05);
+} */
+
+/* Service Note Styling */
+.service-note {
+  padding: 20px;
+  background: url("/public/1.png") no-repeat center center/cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-note:hover {
+  transform: scale(1.02);
+}
+
+.service-note-text p {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  padding: 1rem;
+}
+
+.service-note:hover .service-note-text p {
+  color: #000000;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Button Styling */
+.creative-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.creative-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.creative-button:active {
+  transform: scale(0.98);
+}
+
+/* Button Animation */
+.creative-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.creative-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: transform 0.5s ease;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.creative-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Ensure text is on top of the button */
+.creative-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .intro h1 {
     font-size: 2rem;
   }
 
-  .intro p {
-    font-size: 1.1rem;
-  }
-
-  .service-description h2 {
-    font-size: 1.3rem;
-  }
-
-  .service-description p {
+  .intro-p {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .intro h1 {
-    font-size: 1.6rem;
+    padding: 30px;
   }
 
-  .intro p {
-    font-size: 1rem;
+  .service-heading {
+    font-size: 2rem;
   }
 
-  .service-description h2 {
+  .hr {
+    width: 50%;
+  }
+
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-img {
+    max-width: 100%;
+  }
+
+  .service-text h2 {
     font-size: 1.2rem;
   }
 
-  .service-description p {
-    font-size: 0.85rem;
+  .service-text p {
+    font-size: 1rem;
+  }
+
+  .service-note {
+    padding: 20px;
+  }
+
+  .service-note-text {
+    font-size: 1.2rem;
+  }
+
+  .creative-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-p {
+    font-size: 0.8rem;
+  }
+
+  .service-heading {
+    font-size: 1.5rem;
+  }
+
+  .service-card {
+    margin-bottom: 15px;
+  }
+
+  .service-text h2 {
+    font-size: 1rem;
+  }
+
+  .service-text p {
+    font-size: 0.9rem;
+  }
+
+  .service-note {
+    padding: 15px;
+  }
+
+  .service-note-text {
+    font-size: 1rem;
+  }
+
+  .creative-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 }
 
@@ -1261,15 +1415,17 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   height: 400px;
+  background: url("/public/1.png") no-repeat center center/cover;
 }
 .left {
   display: flex;
   flex-direction: column;
   text-align: flex-start;
-  margin-left: 73px;
-  padding: 2rem;
+  /* margin-left: 73px; */
+  margin: auto;
+  padding: 1rem;
   box-sizing: border-box;
 }
 .category-tag {
@@ -1282,7 +1438,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   font-style: normal;
-  text-align:center;
+  text-align: center;
 }
 .tag {
   background-color: rgb(221, 164, 21);
@@ -1312,6 +1468,8 @@ body {
   font-size: 3rem;
   font-weight: 700;
   font-style: normal;
+  animation: text-fade-in 1s ease-in-out forwards;
+  opacity: 0;
   color: #2f6d79;
   margin-bottom: 0;
   padding: 0.5rem;
@@ -1453,7 +1611,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
-  background-color: lightgrey;
+  background: url("/public/1.png") no-repeat center center/cover;
   height: 400px;
 }
 
@@ -1507,8 +1665,8 @@ body {
   font-weight: 600;
   padding: 20px;
   justify-content: center;
-  text-align:center;
-  align-items:center;
+  text-align: center;
+  align-items: center;
 }
 .extra {
   color: black;
@@ -1534,7 +1692,6 @@ body {
   justify-content: center;
   gap: 80px;
   margin-top: 30px;
-
 }
 
 /* Individual Internship Card Styling */
@@ -1618,10 +1775,10 @@ body {
     width: 100%;
     max-width: 350px;
   }
-  .intern-title{
+  .intern-title {
     justify-content: center;
-    text-align:center;
-    align-items:center;
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -1646,10 +1803,11 @@ body {
   .card-desc {
     font-size: 0.9rem;
   }
-  .intern-title{
+  .intern-title {
     justify-content: center;
-    text-align:center;
-    align-items:center;  }
+    text-align: center;
+    align-items: center;
+  }
 }
 
 /* Testimonial */
@@ -1831,13 +1989,13 @@ body {
 }
 .main-body {
   background-color: #f9f8f8;
-  background-color:rgba(185, 185, 221, 0.582);
+  background-color: rgba(185, 185, 221, 0.582);
   align-items: center;
   justify-content: center;
   margin-top: 0;
   height: 730px;
   padding-top: 50px;
-  background-image:url("/public/login-bg.jpg");
+  background-image: url("/public/login-bg.jpg");
 }
 .register-logo {
   height: 100px;
