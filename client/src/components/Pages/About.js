@@ -10,6 +10,7 @@ const About = () => {
     <Layout>
       <div className="about-us">
         <div className="aboutus-header">
+          <div className="left-para">
           <section className="intro">
             <h1>Who We Are ?</h1>
           </section>
@@ -21,6 +22,16 @@ const About = () => {
             tailored solutions that empower businesses to thrive in the digital
             age."
           </p>
+
+          </div>
+          <div className="right-para">
+            <img src="/about.png"/>
+
+
+           
+            
+          
+        </div>
         </div>
 
         {/* <Slider /> */}

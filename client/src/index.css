@@ -629,6 +629,18 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
   background-color: lightgrey;
+  display:flex;
+  margin-bottom:30px;
+  padding-bottom:20px;
+  height:550px;
+
+}
+.right-para img{
+  width:100%;
+  height:600px;
+  margin-bottom:0;
+  display:flex;
+
 }
 
 /* .intro {
@@ -648,35 +660,40 @@ body {
   font-style: normal; */
   font-family: "Playpen Sans", cursive;
   font-optical-sizing: auto;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   font-style: normal;
-  margin-bottom: 10rem;
-  text-align: center;
+  margin-bottom: 8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: rgb(0, 0, 0);
-  padding-top: 100px;
+  padding-top: 120px;
+  margin-left:50px;
 }
 
 .intro-p {
   font-size: 1.4rem;
-  margin-bottom: 40px;
   text-align: center;
-  max-width: 1000px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(194, 141, 211, 0.811);
+  background-color: rgba(193, 141, 211, 0.692);
   font-weight: 500;
   border-radius: 12px;
-  padding: 70px;
+  padding: 50px;
   color: rgba(0, 0, 0, 0.822);
   position: relative;
-  bottom: 130px;
+  bottom: 100px;
+  margin-left:50px;
 }
 
 .random {
   color: rgb(84, 84, 198);
+}
+
+.about-social{
+  z-index:120;
+  color:black;
 }
 
 /* Service Section */
@@ -685,6 +702,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 40px;
+
 }
 
 .service {
@@ -699,6 +717,7 @@ body {
   min-height: 450px;
   text-align: center;
   box-sizing: border-box;
+  
 }
 
 .service-img {
@@ -720,6 +739,11 @@ body {
   font-size: 50px;
   font-weight: bold;
   color: black;
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .hr {
@@ -1250,11 +1274,15 @@ body {
 }
 .category-tag {
   color: black;
-  font-size: 30px;
   font-weight: 600;
-  margin-left: 140px;
   margin-top: 120px;
   margin-bottom: 20px;
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align:center;
 }
 .tag {
   background-color: rgb(221, 164, 21);
@@ -1478,6 +1506,9 @@ body {
   font-size: 40px;
   font-weight: 600;
   padding: 20px;
+  justify-content: center;
+  text-align:center;
+  align-items:center;
 }
 .extra {
   color: black;
@@ -1486,7 +1517,8 @@ body {
 .intern-container {
   display: flex;
   align-items: center;
-  margin-left: 25%;
+  text-align: center;
+  justify-content: center;
 }
 
 /* .internships-title:hover,
@@ -1502,6 +1534,7 @@ body {
   justify-content: center;
   gap: 80px;
   margin-top: 30px;
+
 }
 
 /* Individual Internship Card Styling */
@@ -1585,6 +1618,11 @@ body {
     width: 100%;
     max-width: 350px;
   }
+  .intern-title{
+    justify-content: center;
+    text-align:center;
+    align-items:center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1608,6 +1646,10 @@ body {
   .card-desc {
     font-size: 0.9rem;
   }
+  .intern-title{
+    justify-content: center;
+    text-align:center;
+    align-items:center;  }
 }
 
 /* Testimonial */
@@ -1789,11 +1831,13 @@ body {
 }
 .main-body {
   background-color: #f9f8f8;
+  background-color:rgba(185, 185, 221, 0.582);
   align-items: center;
   justify-content: center;
   margin-top: 0;
   height: 730px;
   padding-top: 50px;
+  background-image:url("/public/login-bg.jpg");
 }
 .register-logo {
   height: 100px;
