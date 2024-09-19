@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../Layout/Layout";
 
 const Contact = () => {
   return (
-    <Layout>
+    <div className="main-body">
+
       <div className="contact-page">
         <div className="tint">
           <div className="box">
@@ -88,7 +88,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </Layout>
+   </div>
+    
   );
 };
 
