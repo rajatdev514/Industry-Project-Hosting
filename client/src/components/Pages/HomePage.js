@@ -148,6 +148,10 @@ const HomePage = () => {
             )}
           </div>
         </div>
+
+        <div className="home-img">
+          <img src="/training-img.png"/>
+        </div>
       </div>
 
       {/* Counter Section */}
