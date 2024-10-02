@@ -78,7 +78,7 @@ const Internship = () => {
       <div className="internships-page">
         <div className="internships-header">
           <h1 className="internships-title">
-          Shape Your Future with Real-World Experience
+            Shape Your Future with Real-World Experience
           </h1>
           <p className="internships-desc">
             Discover a wide range of internship opportunities designed to help
@@ -86,21 +86,21 @@ const Internship = () => {
             various roles across industries and find the perfect fit for your
             skills and interests.
           </p>
-          
-          <p className="hashtag">#Kickstart Your Career with Technova Internships</p>
+
+          <p className="hashtag">
+            #Kickstart Your Career with Technova Internships
+          </p>
         </div>
-         <div className="intern-container">
+        <div className="intern-container">
+          {/* <i className="fa-solid fa-chevron-right extra"></i>
+         <i className="fa-solid fa-chevron-right extra"></i>
+         <i className="fa-solid fa-chevron-right extra"></i> */}
+          <h3 className="intern-title">Explore Our Internships</h3>
 
+          {/* <i className="fa-solid fa-chevron-right extra"></i>
          <i className="fa-solid fa-chevron-right extra"></i>
-         <i className="fa-solid fa-chevron-right extra"></i>
-         <i className="fa-solid fa-chevron-right extra"></i>
-        <h3 className="intern-title">Explore Our Internships</h3>
-
-         <i className="fa-solid fa-chevron-right extra"></i>
-         <i className="fa-solid fa-chevron-right extra"></i>
-         <i className="fa-solid fa-chevron-right extra"></i>
-
-         </div>
+         <i className="fa-solid fa-chevron-right extra"></i> */}
+        </div>
         <div className="internships-container">
           {internships.map((internship, index) => (
             <a key={index} href={internship.link} className="internship-card">
@@ -111,7 +111,7 @@ const Internship = () => {
               <div className="internship-card-content">
                 <h2 className="internship-card-title">{internship.title}</h2>
                 <p className="internship-card-desc">{internship.description}</p>
-                <button className="intern-btn">Explore</button>
+                {/* <button className="intern-btn">Explore</button> */}
               </div>
             </a>
           ))}

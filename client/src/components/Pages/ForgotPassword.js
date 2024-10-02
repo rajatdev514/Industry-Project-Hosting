@@ -5,27 +5,25 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const Register = () => {
-  const [name, setName] = useState("");
+const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
+  const [newPassword, setNewPassword] = useState("");
   const [answer, setAnswer] = useState("");
+
   const navigate = useNavigate();
 
   // form function
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/v1/auth/register", {
-        name,
+      const res = await axios.post("/api/v1/auth/forgot-password", {
         email,
-        password,
-        phone,
+        newPassword,
         answer,
       });
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
+
         navigate("/login");
       } else {
         toast.error(res.data.message);
@@ -36,22 +34,18 @@ const Register = () => {
     }
   };
 
-  const handleLoginClick = () => {
-    navigate("/login");
+  const handleRegisterClick = () => {
+    navigate("/register");
   };
 
   return (
     <div className="main-body">
       <div className="login-container">
         <div className="register-changes">
-          <img className="register-logo" alt="register-img" src="/tech3.png" />
+          <img className="register-logo" alt="login-logo" src="/tech2.png" />
           <h1>Technova Softwares</h1>
           <p>Navigating Beyond Limits</p>
-          <img
-            className="register-img"
-            src="register-logo.png"
-            alt="register-img"
-          />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s" />
           <p>
             "Join our community to kickstart your data career. Register for top
             courses, internships, and projects to become a skilled data
@@ -62,29 +56,11 @@ const Register = () => {
         <div className="login-card">
           <div className="wrap">
             <h2 className="login-title">
-              Register <i className="fas fa-user-check"></i>
+              Reset Password <i className="fa-solid fa-user-plus"></i>
             </h2>
           </div>
 
           <form onSubmit={handleSubmit}>
-            <div className="input-group starlabel">
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-              <label>Name</label>
-            </div>
-            <div className="input-group starlabel">
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-              <label>Mobile Number</label>
-            </div>
             <div className="input-group starlabel">
               <input
                 type="email"
@@ -96,34 +72,34 @@ const Register = () => {
             </div>
             <div className="input-group starlabel">
               <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              <label>Password</label>
-            </div>
-            <div className="input-group starlabel">
-              <input
                 type="text"
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
                 required
               />
-              <label>Security Question: Which is your favourite sport?</label>
+              <label>Which is your favourite sport</label>
             </div>
-            <button type="submit" className="login-btn">
-              Register <i className="fas fa-smile"></i>
+            <div className="input-group starlabel">
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                required
+              />
+              <label>New Password</label>
+            </div>
+
+            <button type="submit" className="reset-btn">
+              Reset
             </button>
           </form>
-
           <div className="recheck">
-            <p>Already have an account?</p>
+            <p>Don't have account?</p>
             <button
               className="login-btn-registerpage"
-              onClick={handleLoginClick}
+              onClick={handleRegisterClick}
             >
-              Login
+              Register
             </button>
             <p>
               By signing up, you agree to <br />
@@ -137,4 +113,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default ForgotPassword;

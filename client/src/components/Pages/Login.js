@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-import Layout from "../Layout/Layout";
+// import Layout from "../Layout/Layout";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useAuth } from "../../context/auth";
 
@@ -12,6 +12,7 @@ const Login = () => {
   const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   // form function
   const handleSubmit = async (e) => {
@@ -29,7 +30,7 @@ const Login = () => {
           token: res.data.token,
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
-        navigate("/");
+        navigate(location.state || "/");
       } else {
         toast.error(res.data.message);
       }
@@ -47,10 +48,10 @@ const Login = () => {
     <div className="main-body">
       <div className="login-container">
         <div className="register-changes">
-          <img className="register-logo" src="/tech2.png" />
+          <img className="register-logo" alt="login-logo" src="/tech3.png" />
           <h1>Technova Softwares</h1>
           <p>Navigating Beyond Limits</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s" />
+          <img src="/login-img.png" alt="login-img" />
           <p>
             "Join our community to kickstart your data career. Register for top
             courses, internships, and projects to become a skilled data
@@ -61,7 +62,7 @@ const Login = () => {
         <div className="login-card">
           <div className="wrap">
             <h2 className="login-title">
-              Login <i class="fa-solid fa-user-plus"></i>
+              Login <i className="fa-solid fa-user-plus"></i>
             </h2>
           </div>
 
@@ -89,6 +90,15 @@ const Login = () => {
               Login
             </button>
           </form>
+          <button
+            type="submit"
+            className="forgot-btn"
+            onClick={() => {
+              navigate("/forgot-password");
+            }}
+          >
+            Forgot Password
+          </button>
           <div className="recheck">
             <p>Don't have account?</p>
             <button

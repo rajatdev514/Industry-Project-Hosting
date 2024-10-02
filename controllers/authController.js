@@ -1,10 +1,11 @@
 import { comparePassword, hashPassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
+import contactSubmissionModel from "../models/contactSubmissionModel.js";
 import JWT from "jsonwebtoken";
 
 export const registerController = async (req, res) => {
   try {
-    const { name, email, password, phone } = req.body;
+    const { name, email, password, phone, answer } = req.body;
 
     // validation
     if (!name) {
@@ -20,6 +21,11 @@ export const registerController = async (req, res) => {
     if (!password) {
       return res.send({
         message: "Password is required",
+      });
+    }
+    if (!answer) {
+      return res.send({
+        message: "Answer is required",
       });
     }
     // Check if the password length is at least 8 characters
@@ -64,6 +70,7 @@ export const registerController = async (req, res) => {
       email,
       phone,
       password: hashedPassword,
+      answer,
     }).save();
 
     res.status(201).send({
@@ -115,9 +122,11 @@ export const loginController = async (req, res) => {
       success: true,
       message: "Login successful",
       user: {
+        _id: user._id,
         name: user.name,
         email: user.email,
         phone: user.phone,
+        role: user.role,
       },
       token,
     });
@@ -131,7 +140,118 @@ export const loginController = async (req, res) => {
   }
 };
 
+// forgotPasswordController
+export const forgotPasswordController = async (req, res) => {
+  try {
+    const { email, answer, newPassword } = req.body;
+    if (!email) {
+      res.status(400).send({ message: "Emai is required" });
+    }
+    if (!answer) {
+      res.status(400).send({ message: "answer is required" });
+    }
+    if (!newPassword) {
+      res.status(400).send({ message: "New Password is required" });
+    }
+    //check
+    const user = await userModel.findOne({ email, answer });
+    //validation
+    if (!user) {
+      return res.status(404).send({
+        success: false,
+        message: "Wrong Email Or Answer",
+      });
+    }
+    const hashed = await hashPassword(newPassword);
+    await userModel.findByIdAndUpdate(user._id, { password: hashed });
+    res.status(200).send({
+      success: true,
+      message: "Password Reset Successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Something went wrong",
+      error,
+    });
+  }
+};
+
 // test controller
 export const testController = (req, res) => {
   res.send("Protected route");
+};
+
+// Get all users
+export const getUsersController = async (req, res) => {
+  try {
+    const users = await userModel.find(); // Fetch all users from MongoDB
+    res.status(200).send({
+      success: true,
+      message: "Users fetched successfully",
+      users,
+    });
+  } catch (error) {
+    res.status(500).send({
+      success: false,
+      message: "Error fetching users",
+      error,
+    });
+  }
+};
+
+// Controller to get all contact submissions
+export const getContactSubmissionsController = async (req, res) => {
+  try {
+    const submissions = await contactSubmissionModel.find(); // Fetch submissions from MongoDB
+    res.status(200).send({
+      success: true,
+      message: "Contact submissions fetched successfully",
+      submissions,
+    });
+  } catch (error) {
+    res.status(500).send({
+      success: false,
+      message: "Error fetching contact submissions",
+      error,
+    });
+  }
+};
+
+// Contact form submission controller
+export const submitContactFormController = async (req, res) => {
+  try {
+    const { name, email, phone, enquiry, location, message } = req.body;
+
+    // Validation
+    if (!name || !email || !phone || !enquiry.length || !location || !message) {
+      return res.status(400).send({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    // Save to DB
+    const contactSubmission = new contactSubmissionModel({
+      name,
+      email,
+      phone,
+      enquiry,
+      location,
+      message,
+    });
+    await contactSubmission.save();
+
+    res.status(201).send({
+      success: true,
+      message: "Form submitted successfully",
+    });
+  } catch (error) {
+    console.error("Error submitting contact form:", error);
+    res.status(500).send({
+      success: false,
+      message: "Error submitting form",
+    });
+  }
 };

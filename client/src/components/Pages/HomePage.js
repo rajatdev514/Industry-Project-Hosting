@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
@@ -16,6 +16,10 @@ const HomePage = () => {
     localStorage.removeItem("auth");
     navigate("/");
     toast.success("Logout Successful");
+  };
+
+  const handleDash = () => {
+    navigate(`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`);
   };
 
   // Counter section logic
@@ -142,15 +146,46 @@ const HomePage = () => {
                 </button>
               </>
             ) : (
-              <button className="home-logout-btn" onClick={handleLogout}>
-                Logout
-              </button>
+              <>
+                <li className="dropdown">
+                  <NavLink
+                    className="nav-link dropdown-toggle user-name"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {auth?.user?.name}
+                  </NavLink>
+                  <ul className="dropdown-menu">
+                    {/* Show Dashboard button only for admin (role === 1) */}
+                    {auth?.user?.role === 1 && (
+                      <li>
+                        <button
+                          className="dropdown-item home-dash-btn"
+                          onClick={handleDash}
+                        >
+                          Dashboard
+                        </button>
+                      </li>
+                    )}
+                    <li>
+                      <button
+                        className="dropdown-item home-logout-btn"
+                        onClick={handleLogout}
+                      >
+                        Logout
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </>
             )}
           </div>
         </div>
 
         <div className="home-img">
-          <img src="/training-img.png"/>
+          <img src="/home-img.png" />
         </div>
       </div>
 

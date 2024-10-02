@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext, createContext } from "react";
+import axios from "axios";
 
 const AuthContext = createContext();
 
@@ -8,11 +9,15 @@ const AuthProvider = ({ children }) => {
     token: "",
   });
 
+  // default axios
+  axios.defaults.headers.common["Authorization"] = auth?.token;
+
   useEffect(() => {
     const data = localStorage.getItem("auth");
     if (data) {
       const parseData = JSON.parse(data);
       setAuth({
+        ...auth,
         user: parseData.user, // avoid spreading stale state
         token: parseData.token,
       });

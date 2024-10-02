@@ -11,6 +11,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.5",
     "bootstrap": "^5.3.3",
+    "exceljs": "^4.4.0",
+    "file-saver": "^2.0.5",
     "jwt-decode": "^4.0.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
@@ -20,7 +22,9 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5",
+    "xlsx-style": "^0.8.13"
   },
   "scripts": {
     "start": "react-scripts start",

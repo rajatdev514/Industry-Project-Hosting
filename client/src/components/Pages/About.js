@@ -22,7 +22,7 @@ const About = () => {
             </p>
           </div>
           <div className="right-para">
-            <img src="/about.png" />
+            <img src="/about.png" alt="" />
           </div>
         </div>
 

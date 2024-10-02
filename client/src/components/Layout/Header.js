@@ -75,7 +75,7 @@ const Header = () => {
                   to="/training"
                   onClick={() => setIsOpen(false)}
                 >
-                  <i className="fa-solid fa-school"></i>
+                  <i className="fa-solid fa-code"></i>
                   <span>Training</span>
                 </NavLink>
               </li>
@@ -86,7 +86,7 @@ const Header = () => {
                   to="/internship"
                   onClick={() => setIsOpen(false)}
                 >
-                  <i className="fa-solid fa-calendar"></i>
+                  <i className="fa-solid fa-desktop"></i>
                   <span>Internship</span>
                 </NavLink>
               </li>
@@ -97,7 +97,7 @@ const Header = () => {
                   to="/projects"
                   onClick={() => setIsOpen(false)}
                 >
-                  <i className="fas fa-project-diagram"></i>
+                  <i className="fa-solid fa-file-zipper"></i>
                   <span>Projects</span>
                 </NavLink>
               </li>
@@ -108,7 +108,7 @@ const Header = () => {
                   to="/contact"
                   onClick={() => setIsOpen(false)}
                 >
-                  <i className="fa-solid fa-business-time"></i>{" "}
+                  <i className="fa-solid fa-address-book"></i>
                   <span>Contact</span>
                 </NavLink>
               </li>

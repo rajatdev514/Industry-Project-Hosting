@@ -1,7 +1,11 @@
 import express from "express";
 import {
+  forgotPasswordController,
+  getContactSubmissionsController,
+  getUsersController,
   loginController,
   registerController,
+  submitContactFormController,
   testController,
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
@@ -15,6 +19,9 @@ router.post("/register", registerController);
 
 // LOGIN || POST
 router.post("/login", loginController);
+
+// forgot password
+router.post("/forgot-password", forgotPasswordController);
 
 // test routes
 router.get("/test", requireSignIn, isAdmin, testController);
@@ -31,5 +38,29 @@ router.get("/download-syllabus", requireSignIn, (req, res) => {
     }
   });
 });
+
+// protected user routes
+router.get("/user-auth", requireSignIn, (req, res) => {
+  res.status(200).send({ ok: true });
+});
+
+// protected admin routes
+router.get("/admin-auth", requireSignIn, isAdmin, (req, res) => {
+  res.status(200).send({ ok: true });
+});
+
+// Route to fetch all users
+router.get("/users", requireSignIn, isAdmin, getUsersController);
+
+// contact page details
+router.get(
+  "/contact-submissions",
+  requireSignIn,
+  isAdmin,
+  getContactSubmissionsController
+);
+
+// Contact form submission route
+router.post("/contact", submitContactFormController);
 
 export default router;
