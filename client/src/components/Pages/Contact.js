@@ -4,17 +4,47 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const Contact = () => {
-  // Array of districts
   const districts = [
+    "Ahmednagar, Maharashtra, India",
+    "Akola, Maharashtra, India",
+    "Amravati, Maharashtra, India",
+    "Aurangabad, Maharashtra, India",
+    "Beed, Maharashtra, India",
+    "Bhandara, Maharashtra, India",
+    "Buldhana, Maharashtra, India",
+    "Chandrapur, Maharashtra, India",
+    "Dhule, Maharashtra, India",
+    "Gadchiroli, Maharashtra, India",
+    "Gondia, Maharashtra, India",
+    "Hingoli, Maharashtra, India",
+    "Jalgaon, Maharashtra, India",
+    "Jalna, Maharashtra, India",
+    "Kolhapur, Maharashtra, India",
+    "Latur, Maharashtra, India",
     "Mumbai, Maharashtra, India",
+    "Nagpur, Maharashtra, India",
+    "Nanded, Maharashtra, India",
+    "Nandurbar, Maharashtra, India",
+    "Nashik, Maharashtra, India",
+    "Osmanabad, Maharashtra, India",
+    "Palghar, Maharashtra, India",
+    "Parbhani, Maharashtra, India",
     "Pune, Maharashtra, India",
-    // Other districts...
+    "Raigad, Maharashtra, India",
+    "Ratnagiri, Maharashtra, India",
+    "Sangli, Maharashtra, India",
+    "Satara, Maharashtra, India",
+    "Sindhudurg, Maharashtra, India",
+    "Solapur, Maharashtra, India",
+    "Thane, Maharashtra, India",
+    "Wardha, Maharashtra, India",
+    "Washim, Maharashtra, India",
+    "Yavatmal, Maharashtra, India",
+    "other...",
   ];
 
-  // Sort districts alphabetically
   const sortedDistricts = districts.sort();
 
-  // State to hold form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,11 +54,9 @@ const Contact = () => {
     message: "",
   });
 
-  // Handle form input change
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
-      // Handle checkbox
       setFormData((prevData) => ({
         ...prevData,
         enquiry: checked
@@ -40,7 +68,6 @@ const Contact = () => {
     }
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -78,7 +105,41 @@ const Contact = () => {
                 alt="Contact Us"
                 className="contact-image"
               />
-              {/* Social links... */}
+              {/* Add email and phone number */}
+              <p className="contact-email">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:technovasoftwares@gmail.com ">
+                  technovasoftwares@gmail.com
+                </a>
+              </p>
+              <p className="contact-phone">
+                <i class="fa-solid fa-phone"></i>+91-8600149970
+              </p>
+
+              {/* Social links with icons */}
+              <div className="social-links">
+                <a
+                  href="https://github.com/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github social-icon"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin social-icon"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram social-icon"></i>
+                </a>
+              </div>
             </div>
 
             {/* Form */}
