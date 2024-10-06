@@ -7,13 +7,24 @@ import authRoutes from "./routes/authRoute.js";
 import cors from "cors";
 
 // configure env
-dotenv.config();
+// dotenv.config();
+
+dotenv.config({ path: "./server/.env" });
 
 // database config
 connectDB();
 
 // rest object
 const app = express();
+
+// deployment
+// app.use(
+//   cors({
+//     origin: ["https://technovasoftwares.vercel.app"],
+//     methode: ["POST", "GET"],
+//     credentials: true,
+//   })
+// );
 
 // middleware
 app.use(cors());
