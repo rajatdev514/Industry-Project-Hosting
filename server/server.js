@@ -17,15 +17,6 @@ connectDB();
 // rest object
 const app = express();
 
-// deployment
-// app.use(
-//   cors({
-//     origin: ["https://technovasoftwares.vercel.app"],
-//     methode: ["POST", "GET"],
-//     credentials: true,
-//   })
-// );
-
 // middleware
 app.use(cors());
 app.use(express.json());

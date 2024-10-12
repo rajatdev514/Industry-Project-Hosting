@@ -1,6 +1,7 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Layout from "../Layout/Layout";
+import toast from "react-hot-toast";
 
 const Projectcard = () => {
   const projectData = [
@@ -280,6 +281,13 @@ const Projectcard = () => {
   // Find the selected course based on the id from the URL
   const selectedCourse = projectData.find((course) => course.id === courseId);
 
+  const navigate = useNavigate(); // useNavigate hook here
+
+  const handleDownload = () => {
+    navigate("/contact"); // Correct usage of navigate here
+    toast.success("Redirecting to contact page.");
+  };
+
   return (
     <Layout>
       <div className="project-one-card">
@@ -303,10 +311,10 @@ const Projectcard = () => {
             <div key={index} className="projects-card">
               <h2>{project.title}</h2>
               <p> {project.description}</p>
-              <div className="author-name">
+              {/* <div className="author-name">
                 <p className="author">Author</p>
                 <p>{project.author}</p>
-              </div>
+              </div> */}
 
               <div className="author-name">
                 <p className="author">Prerequisite</p>
@@ -325,8 +333,12 @@ const Projectcard = () => {
               </div>
 
               <div className="projects-button-container">
-                <button className="view-btn">View Project</button>
-                <button className="download-project">Download Project</button>
+                <button className="view-btn" onClick={handleDownload}>
+                  View Project
+                </button>
+                <button className="download-project" onClick={handleDownload}>
+                  Download Project
+                </button>
               </div>
             </div>
           ))

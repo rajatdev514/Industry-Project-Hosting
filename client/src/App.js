@@ -4,7 +4,7 @@ import HomePage from "./components/Pages/HomePage";
 import About from "./components/Pages/About";
 import Training from "./components/Pages/Training";
 import Internship from "./components/Pages/Internship";
-import Career from "./components/Pages/Career";
+// import Career from "./components/Pages/Career";
 import Contact from "./components/Pages/Contact";
 import Projects from "./components/Pages/Projects";
 import Login from "./components/Pages/Login";
@@ -18,6 +18,7 @@ import ForgotPassword from "./components/Pages/ForgotPassword";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./components/Pages/admin/AdminDashboard";
 import Projectcard from "./components/Pages/Projectcard";
+import InterCard from "./components/Pages/InterCard";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/training" element={<Training />} />
         <Route path="/internship" element={<Internship />} />
-        <Route path="/career" element={<Career />} />
+        <Route path="/internship/:id" element={<InterCard />} />
+        {/* <Route path="/career" element={<Career />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/login" element={<Login />} />

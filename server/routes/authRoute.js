@@ -27,17 +27,17 @@ router.post("/forgot-password", forgotPasswordController);
 router.get("/test", requireSignIn, isAdmin, testController);
 
 // get pdf
-router.get("/download-syllabus", requireSignIn, (req, res) => {
-  const pdfPath = path.join(__dirname, "../public/Rajat_Mahajan.pdf");
-  res.download(pdfPath, "Syllabus.pdf", (err) => {
-    if (err) {
-      res.status(500).send({
-        success: false,
-        message: "Error in downloading syllabus",
-      });
-    }
-  });
-});
+// router.get("/download-syllabus", requireSignIn, (req, res) => {
+//   const pdfPath = path.join(__dirname, "../public/Rajat_Mahajan.pdf");
+//   res.download(pdfPath, "Syllabus.pdf", (err) => {
+//     if (err) {
+//       res.status(500).send({
+//         success: false,
+//         message: "Error in downloading syllabus",
+//       });
+//     }
+//   });
+// });
 
 // protected user routes
 router.get("/user-auth", requireSignIn, (req, res) => {

@@ -45,7 +45,7 @@ const ForgotPassword = () => {
           <img className="register-logo" alt="login-logo" src="/tech2.png" />
           <h1>Technova Softwares</h1>
           <p>Navigating Beyond Limits</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmVHxUH49e5n5ZK0JmlLpjA--WY2GMDXoIg&s" />
+          <img src="/forgot-img.jpeg" alt="forgot-page" />
           <p>
             "Join our community to kickstart your data career. Register for top
             courses, internships, and projects to become a skilled data

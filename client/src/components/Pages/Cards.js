@@ -220,7 +220,9 @@ const courses = [
     ],
   },
 
-  // Add other courses here...
+  // Add other courses here...
+
+  // Your course data
 ];
 
 const Cards = () => {
@@ -234,12 +236,8 @@ const Cards = () => {
   }
 
   const handleDownload = () => {
-    if (auth && auth.token) {
-      window.open("/Rajat_Mahajan.pdf");
-    } else {
-      navigate("/login"); // redirect to login if not authenticated
-      toast.error("You need to be logged in to download the syllabus.");
-    }
+    navigate("/contact"); // Redirect to contact page instead of downloading the syllabus
+    toast.success("Redirecting to contact page.");
   };
 
   return (

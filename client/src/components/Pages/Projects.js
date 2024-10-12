@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../Layout/Layout";
-import { FaClock, FaCertificate, FaStar } from "react-icons/fa";
+// import { FaClock, FaCertificate, FaStar } from "react-icons/fa";
 
 const Projects = () => {
   const Projects = [
@@ -106,15 +106,12 @@ const Projects = () => {
           <div className="additional">
             <h3>Technova Projects </h3>
           </div>
-          <h1 className="courses-title">INTRODUCING OUR Projects</h1>
+          <h1 className="courses-title">INTRODUCING OUR PROJECTS</h1>
           <p className="para-1">Find interesting projects and execute them! </p>
           <p className="para-2">#BuildProjects</p>
         </div>
         <div className="right">
-          <img
-            src="https://xperiencify.com/_next/static/media/guy-desk-laptop.0a61b579.svg"
-            alt="training"
-          />
+          <img src="/project-page.svg" alt="training" />
         </div>
       </div>
 
@@ -136,7 +133,7 @@ const Projects = () => {
             <div className="card-tint"></div>
 
             <div className="arrow">
-              <img src="arrow.svg" alt="" />
+              <img src="/arrow.svg" alt="" />
             </div>
           </div>
         ))}

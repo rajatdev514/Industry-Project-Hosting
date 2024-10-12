@@ -109,7 +109,7 @@ const Training = () => {
           <p className="para-2">#UpgradeYourKnowledge</p>
           <div className="tag">Give it a try!</div>
         </div>
-        <div className="right">
+        <div className="right-training">
           <img src="/training-img.png" alt="training" />
         </div>
       </div>

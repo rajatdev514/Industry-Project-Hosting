@@ -73,7 +73,9 @@ const Contact = () => {
     try {
       const response = await axios.post("/api/v1/auth/contact", formData);
       if (response.data.success) {
-        toast.success("Message sent successfully");
+        toast.success(
+          "We have received your enguiry, we will contact you shortly..."
+        );
         setFormData({
           name: "",
           email: "",
