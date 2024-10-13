@@ -30,6 +30,13 @@ app.get("/", (req, res) => {
   res.send("<h1>TechNova Software Backend</h1>");
 });
 
+app.use(
+  cors({
+    origin: "*", // Allow requests from your frontend domain
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary HTTP methods
+  })
+);
+
 // PORT
 const PORT = process.env.PORT || 8080;
 // run listen
