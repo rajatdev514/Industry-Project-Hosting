@@ -32,8 +32,8 @@ app.get("/", (req, res) => {
 
 app.use(
   cors({
-    origin: "*", // Allow requests from your frontend domain
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary HTTP methods
+    origin: "https://industry-project-hosting.vercel.app", // Vercel frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
