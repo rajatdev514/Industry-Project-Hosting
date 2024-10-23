@@ -33,9 +33,11 @@ app.get("/", (req, res) => {
 app.use(
   cors({
     origin: "https://industry-project-hosting.vercel.app", // Vercel frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary HTTP methods
+    credentials: true, // If you're sending cookies or session data
   })
 );
+
 
 // PORT
 const PORT = process.env.PORT || 8080;
