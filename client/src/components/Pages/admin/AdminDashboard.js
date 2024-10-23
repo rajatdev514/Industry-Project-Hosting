@@ -13,7 +13,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchUsersAndAdmins = async () => {
       try {
-        const { data } = await axios.get("/api/v1/auth/users");
+        const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/users`);
         if (data.success) {
           // Separate admins and users based on role
           setAdmins(data.users.filter((user) => user.role === 1)); // Admins
